@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toán 5 – Tuần 14, 15, 16, 17 – Tổng hợp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,500;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>:root{--leaf:#2f8f5b;--leaf-dark:#1f6a42;--leaf-soft:#e3f5ea;--sky:#dff1fb;--sun:#ffb53d;--petal:#f26d85;--ink:#23402f;--paper:#fffdf6;--line:#d6e6d9;--ok:#1f9d63;--ok-bg:#e2f7eb;--bad:#e04f4f;--bad-bg:#fdeaea}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Nunito',system-ui,Arial,sans-serif;color:var(--ink);font-size:17px;line-height:1.6;background:linear-gradient(180deg,#dff1fb 0,#eef8ee 420px,#f4faef 100%)}
+h1,h2,h3{font-family:'Baloo 2','Nunito',system-ui,sans-serif;line-height:1.2;margin:0}
+.wrap{max-width:820px;margin:0 auto;padding:0 14px 80px}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,253,246,.94);backdrop-filter:blur(6px);border-bottom:2px solid var(--line)}
+.tb-in{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:6px 14px}
+.bar{flex:1;height:12px;background:#e4efe6;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6cc17a,#ffb53d);border-radius:99px;transition:width .35s}
+#barTxt{font-weight:800;font-size:14px;color:var(--leaf-dark);min-width:44px;text-align:right}
+#muteBtn{border:2px solid var(--line);background:#fff;border-radius:50%;width:38px;height:38px;font-size:18px;cursor:pointer;line-height:1}
+.hero{position:relative;margin:0 -14px;overflow:hidden}
+.hero svg{display:block;width:100%;height:auto}
+.hero-title{position:absolute;left:0;right:0;top:4%;text-align:center;padding:0 12px}
+.hero-title .wk{display:inline-block;background:#fff;color:var(--leaf-dark);font-weight:800;border-radius:999px;padding:3px 16px;font-size:15px;box-shadow:0 3px 0 rgba(31,106,66,.18)}
+.hero-title h1{font-size:clamp(30px,8.5vw,56px);color:#fff;font-weight:800;text-shadow:0 3px 0 var(--leaf-dark),0 6px 14px rgba(31,106,66,.35);margin-top:4px}
+.card{background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:20px 18px;margin-top:18px;box-shadow:0 6px 0 #cfe3d2}
+.info{display:grid;grid-template-columns:1fr 130px;gap:12px}
+.info label{font-weight:800;font-size:15px;display:block;margin-bottom:4px}
+.info input{width:100%;font:inherit;padding:11px 14px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}
+.info input[readonly]{background:#eef5ee;font-weight:800}
+.nm-list{display:flex;flex-wrap:wrap;gap:8px}
+.nm-list button{font:inherit;font-weight:700;border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer;color:var(--ink)}
+.nm-list button.on{background:var(--leaf);border-color:var(--leaf-dark);color:#fff}
+input:focus,button:focus-visible,.opt:focus-within{outline:3px solid var(--sun);outline-offset:2px}
+.section-h{display:flex;align-items:center;gap:12px;margin:30px 0 0}
+.section-h .ico{flex:none;width:54px;height:54px}
+.section-h h2{font-size:28px;color:var(--leaf-dark)}
+.section-h p{margin:0;font-size:15px;color:#557a63}
+.q{position:relative;transition:background .25s,border-color .25s}
+.q-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--leaf);color:#fff;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:20px;display:grid;place-items:center;box-shadow:0 3px 0 var(--leaf-dark)}
+.q-head .t{font-weight:800;font-size:18px}
+.st{margin:6px 0;font-size:18px;overflow-wrap:anywhere}
+.mt{font-family:'Nunito','Times New Roman',serif;white-space:normal}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 2px;line-height:1.15;font-size:.92em}
+.fr .n{border-bottom:2px solid currentColor;padding:0 3px}
+.fr .d{padding:0 3px}
+.fig{margin:10px 0;text-align:center}
+.fig img,.fig svg{max-width:100%;height:auto;border-radius:12px;border:2px solid var(--line);background:#fff;max-height:340px}
+.fig svg{width:min(100%,460px)}
+.tw{overflow-x:auto;margin:8px 0}
+.dt{border-collapse:collapse;font-size:16px;background:#fff}
+.dt th,.dt td{border:2px solid var(--line);padding:6px 12px;text-align:center}
+.dt th{background:var(--leaf-soft)}
+.opts{margin-top:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--line);border-radius:14px;padding:11px 14px;margin-top:9px;cursor:pointer;background:#fff;min-height:48px}
+.opt input{margin-top:5px;accent-color:var(--leaf);width:20px;height:20px;flex:none}
+.opt:has(input:checked){border-color:var(--leaf);background:var(--leaf-soft)}
+.opt b{flex:none}
+.opt .ot{flex:1;min-width:0}
+.opt .fig{margin:4px 0}.opt .fig svg,.opt .fig img{max-height:130px}
+.cmprow{display:flex;gap:12px;margin-top:10px}
+.cmpb{flex:1;font:inherit;font-weight:800;font-size:30px;border:2px solid var(--line);background:#fff;border-radius:16px;padding:6px 0;cursor:pointer;color:var(--leaf-dark);min-height:56px}
+.cmpb:hover{background:var(--leaf-soft)}
+.fi{font:inherit;font-weight:800;font-size:18px;width:130px;max-width:46vw;padding:4px 10px;border:2px solid var(--leaf);border-radius:12px;background:var(--leaf-soft);color:var(--leaf-dark);text-align:center;vertical-align:middle;margin:2px 3px;min-height:42px}
+.frow{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
+.fl{font-weight:800}
+.note{font-size:14.5px;color:#557a63;margin:8px 0 0}.note.warn{color:#b36b00;font-weight:800}
+.btn{font-family:'Baloo 2','Nunito',sans-serif;font-weight:800;font-size:22px;border:0;border-radius:999px;padding:12px 38px;cursor:pointer;background:var(--sun);color:#5a3a00;box-shadow:0 6px 0 #d18a12}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #d18a12}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.small{font-size:17px;padding:8px 24px;margin-top:12px;background:var(--leaf);color:#fff;box-shadow:0 5px 0 var(--leaf-dark)}
+.btn.green{background:var(--leaf);color:#fff;box-shadow:0 6px 0 var(--leaf-dark);font-size:18px;padding:9px 28px}
+.fb{display:none;margin-top:12px;border-radius:14px;padding:12px 14px;font-size:16.5px}
+.graded .fb{display:block}
+.fb .vd{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:21px}
+.fb .sl{margin-top:6px;color:#3b5a47}
+.q.ok{background:#f2fbf5;border-color:var(--ok)}
+.q.ok .fb{background:var(--ok-bg)}.q.ok .vd{color:var(--ok)}
+.q.bad{background:#fff8f8;border-color:#efb0b0}
+.q.bad .fb{background:var(--bad-bg)}.q.bad .vd{color:var(--bad)}
+.opt.right{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.cmpb.right{border-color:var(--ok);background:var(--ok-bg)}
+.cmpb.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.fi.right{border-color:var(--ok);background:var(--ok-bg)}
+.fi.wrong{border-color:var(--bad);background:var(--bad-bg);text-decoration:line-through}
+.score-tag{display:none;position:absolute;top:-13px;right:14px;font-weight:800;font-size:14px;border-radius:999px;padding:2px 12px;color:#fff}
+.graded .score-tag{display:block}
+.score-tag.full{background:var(--ok)}.score-tag.part{background:#e59a1c}.score-tag.zero{background:var(--bad)}
+.graded .opt,.graded .cmpb{cursor:default}
+.loi{border-style:dashed}
+.submit-zone{text-align:center;margin-top:30px}
+#msg{color:var(--bad);font-weight:800;min-height:26px;margin:10px 0 0}
+#result{display:none;text-align:center;background:linear-gradient(180deg,#fff8e1,#fffdf6);border-color:var(--sun);box-shadow:0 6px 0 #f0cf86}
+#result.show{display:block}
+#result .em{font-size:60px;line-height:1}
+#result .sc{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:46px;color:var(--leaf-dark);line-height:1.1}
+#result .s10{font-weight:800;color:#b36b00}
+.rmsg{font-weight:800;margin:8px 0}
+.pop{animation:pop .5s ease-out}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.025)}100%{transform:scale(1)}}
+.spark{position:absolute;pointer-events:none;font-size:20px;animation:sp 1s ease-out forwards}
+@keyframes sp{from{opacity:1;transform:translateY(0) scale(.6)}to{opacity:0;transform:translateY(-46px) scale(1.2)}}
+@media (max-width:600px){body{font-size:16px}.info{grid-template-columns:1fr}.st{font-size:17px}.fi{width:104px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pop,.spark{animation:none}.bar i{transition:none}}
+
+.cloud{animation:drift 30s linear infinite alternate}
+.cloud.c2{animation-duration:42s;animation-delay:-8s}
+@keyframes drift{to{transform:translateX(46px)}}
+.fly{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.fly.d1{animation-delay:-1.3s}.fly.d2{animation-delay:-2.6s}
+@keyframes bob{50%{transform:translate(6px,-10px) rotate(3deg)}}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+@keyframes tw{50%{opacity:.4}}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.spin{animation:spin 24s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.drive{animation:drive 9s linear infinite}
+@keyframes drive{from{transform:translateX(-120px)}to{transform:translateX(880px)}}
+.grow{animation:grow 4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.grow.d1{animation-delay:-1s}.grow.d2{animation-delay:-2s}.grow.d3{animation-delay:-3s}
+@keyframes grow{50%{transform:scaleY(.82)}}
+.swing{animation:swing 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
+@keyframes swing{50%{transform:rotate(7deg)}}
+.hand{animation:spin 40s linear infinite;transform-box:view-box;transform-origin:0 0}
+@media (prefers-reduced-motion:reduce){.cloud,.fly,.twinkle,.sway,.spin,.drive,.grow,.swing,.hand{animation:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="tb-in"><div class="bar"><i id="barFill"></i></div><span id="barTxt">0/19</span><button type="button" id="muteBtn" aria-label="Bật hoặc tắt âm thanh" aria-pressed="false">🔊</button></div></div>
+<div class="wrap">
+<div class="hero"><svg viewBox="0 0 820 400" role="img" aria-label="Tranh vẽ buổi sáng đẹp trời: vòng quay hình tròn và chiếc xe đạp" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fc0ec"/><stop offset=".62" stop-color="#cfeaf6"/><stop offset="1" stop-color="#ffe4c9"/></linearGradient>
+<radialGradient id="sunG" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3b0"/><stop offset=".55" stop-color="#ffc94d"/><stop offset="1" stop-color="#ffc94d" stop-opacity="0"/></radialGradient></defs>
+<rect width="820" height="400" fill="url(#sky)"/>
+<g class="twinkle"><circle cx="705" cy="105" r="88" fill="url(#sunG)"/></g><circle cx="705" cy="105" r="38" fill="#ffb53d"/>
+<g class="cloud" fill="#fff" opacity=".92"><ellipse cx="120" cy="150" rx="48" ry="16"/><ellipse cx="150" cy="140" rx="32" ry="15"/></g>
+<g class="cloud c2" fill="#fff" opacity=".9"><ellipse cx="520" cy="190" rx="42" ry="13"/><ellipse cx="546" cy="182" rx="26" ry="12"/></g>
+<path d="M0 300 Q170 238 340 292 T650 276 T820 292 V400 H0Z" fill="#a9dba0"/>
+<path d="M0 340 Q230 292 440 332 T820 322 V400 H0Z" fill="#6cc17a"/>
+<g transform="translate(250 250)"><path d="M0 0 L-62 100 M0 0 L62 100" stroke="#8b5a2b" stroke-width="7" stroke-linecap="round"/><g class="spin"><circle r="110" fill="none" stroke="#3a6ea5" stroke-width="5"/><path d="M0 0 L110 0" stroke="#3a6ea5" stroke-width="3"/><path d="M0 0 L78 78" stroke="#3a6ea5" stroke-width="3"/><path d="M0 0 L0 110" stroke="#3a6ea5" stroke-width="3"/><path d="M0 0 L-78 78" stroke="#3a6ea5" stroke-width="3"/><path d="M0 0 L-110 0" stroke="#3a6ea5" stroke-width="3"/><path d="M0 0 L-78 -78" stroke="#3a6ea5" stroke-width="3"/><path d="M0 0 L-0 -110" stroke="#3a6ea5" stroke-width="3"/><path d="M0 0 L78 -78" stroke="#3a6ea5" stroke-width="3"/><g transform="translate(110 0)"><circle r="11" fill="#f26d85" stroke="#23402f" stroke-opacity=".4" stroke-width="2.5"/></g><g transform="translate(78 78)"><circle r="11" fill="#ffb53d" stroke="#23402f" stroke-opacity=".4" stroke-width="2.5"/></g><g transform="translate(0 110)"><circle r="11" fill="#8fcb4a" stroke="#23402f" stroke-opacity=".4" stroke-width="2.5"/></g><g transform="translate(-78 78)"><circle r="11" fill="#4fa3e8" stroke="#23402f" stroke-opacity=".4" stroke-width="2.5"/></g><g transform="translate(-110 0)"><circle r="11" fill="#f26d85" stroke="#23402f" stroke-opacity=".4" stroke-width="2.5"/></g><g transform="translate(-78 -78)"><circle r="11" fill="#ffb53d" stroke="#23402f" stroke-opacity=".4" stroke-width="2.5"/></g><g transform="translate(-0 -110)"><circle r="11" fill="#8fcb4a" stroke="#23402f" stroke-opacity=".4" stroke-width="2.5"/></g><g transform="translate(78 -78)"><circle r="11" fill="#4fa3e8" stroke="#23402f" stroke-opacity=".4" stroke-width="2.5"/></g></g><circle r="9" fill="#e59a1c"/></g><g transform="translate(590 306)"><circle cx="0" cy="0" r="38" fill="none" stroke="#37474f" stroke-width="7"/><circle cx="120" cy="0" r="38" fill="none" stroke="#37474f" stroke-width="7"/><path d="M0 0 l50 -52 h40 l30 52 M50 -52 l-8 -22 h-16 M92 -52 l12 -26 h20" fill="none" stroke="#c0392b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(740 352) scale(0.7)"><rect x="-6" y="-40" width="12" height="44" fill="#8b5a2b"/><g class="sway"><circle cx="0" cy="-66" r="30" fill="#2f8f5b"/><circle cx="-20" cy="-48" r="22" fill="#48b06f"/><circle cx="20" cy="-48" r="22" fill="#2f8f5b"/></g></g><g transform="translate(60 372)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#f26d85"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(330 376)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#fff"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(520 372)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#b98cf0"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(770 376)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#f26d85"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g></svg><div class="hero-title"><span class="wk">Toán 5 – Tuần 14, 15, 16, 17 – Tổng hợp</span><h1>Luyện tập tổng hợp</h1></div></div>
+<div class="card info">
+  <div><label for="studentName">Họ và tên của em</label><input id="studentName" type="text" autocomplete="name" placeholder="Nhập họ và tên của em..."></div>
+  <div><label for="studentClass">Lớp</label><input id="studentClass" type="text" placeholder="VD: 5A"></div>
+</div>
+<div class="section-h"><svg class="ico" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="27" fill="#cfeaf6"/><text x="27" y="35" text-anchor="middle" font-family="Baloo 2,Nunito,Arial" font-weight="800" font-size="22" fill="#1f6a42">○</text></svg><div><h2>Bài tập tổng hợp</h2><p>Ôn lại kiến thức nhiều tuần, em nhé!</p></div></div>
+<div class="card q" id="q1" data-i="0"><span class="score-tag"></span><div class="q-head"><span class="num">1</span><span class="t">Câu 1</span></div><p class="st">Một khu đất hình tam giác. Nếu tăng độ dài đáy thêm 6 m và giữ nguyên chiều cao thì diện tích tăng thêm 48 m². Nếu tăng chiều cao thêm 4 m và giữ nguyên độ dài đáy thì diện tích tăng thêm 60 m². Diện tích ban đầu của khu đất là</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q1" value="A"><b>A.</b><span class="ot">180 m²</span></label><label class="opt" data-k="B"><input type="radio" name="q1" value="B"><b>B.</b><span class="ot">220 m²</span></label><label class="opt" data-k="C"><input type="radio" name="q1" value="C"><b>C.</b><span class="ot">240 m²</span></label><label class="opt" data-k="D"><input type="radio" name="q1" value="D"><b>D.</b><span class="ot">480 m²</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q loi" id="q2"><div class="q-head"><span class="num">2</span><span class="t">Câu 2</span></div><p class="st">Một hình thang có đáy lớn gấp đôi đáy bé. Biết diện tích là 126 cm² và chiều cao là 9 cm. Đáy lớn là</p><p class="note warn">⚠️ Câu này đề bài có sai sót nên không tính điểm. Cô sẽ chỉnh lại cho em.</p></div><div class="card q" id="q3" data-i="2"><span class="score-tag"></span><div class="q-head"><span class="num">3</span><span class="t">Câu 3</span></div><p class="st">Một hình tròn có chu vi 131,88 cm. Người ta giảm bán kính đi 4 cm. Diện tích hình tròn giảm là</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q3" value="A"><b>A.</b><span class="ot">351,68 cm²</span></label><label class="opt" data-k="B"><input type="radio" name="q3" value="B"><b>B.</b><span class="ot">401,92 cm²</span></label><label class="opt" data-k="C"><input type="radio" name="q3" value="C"><b>C.</b><span class="ot">477,28 cm²</span></label><label class="opt" data-k="D"><input type="radio" name="q3" value="D"><b>D.</b><span class="ot">502,40 cm²</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q4" data-i="3"><span class="score-tag"></span><div class="q-head"><span class="num">4</span><span class="t">Câu 4</span></div><p class="st">Một hình tròn có diện tích 256 cm². Người ta làm một hình vuông có diện tích bằng diện tích hình tròn đó. Chu vi hình vuông là</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q4" value="A"><b>A.</b><span class="ot">58 cm</span></label><label class="opt" data-k="B"><input type="radio" name="q4" value="B"><b>B.</b><span class="ot">64 cm</span></label><label class="opt" data-k="C"><input type="radio" name="q4" value="C"><b>C.</b><span class="ot">66 cm</span></label><label class="opt" data-k="D"><input type="radio" name="q4" value="D"><b>D.</b><span class="ot">72 cm</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q5" data-i="4"><span class="score-tag"></span><div class="q-head"><span class="num">5</span><span class="t">Câu 5</span></div><p class="st">Một khu đất hình tam giác được mở rộng phần đáy thêm 8 m nên diện tích tăng thêm 60 m². Biết độ dài đáy ban đầu là 24 m. Tính diện tích khu đất lúc sau.</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q5" value="A"><b>A.</b><span class="ot">200 m²</span></label><label class="opt" data-k="B"><input type="radio" name="q5" value="B"><b>B.</b><span class="ot">220 m²</span></label><label class="opt" data-k="C"><input type="radio" name="q5" value="C"><b>C.</b><span class="ot">240 m²</span></label><label class="opt" data-k="D"><input type="radio" name="q5" value="D"><b>D.</b><span class="ot">300 m²</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q6" data-i="5"><span class="score-tag"></span><div class="q-head"><span class="num">6</span><span class="t">Câu 6</span></div><p class="st">Một hình tam giác có diện tích 42 dm². Nếu giữ nguyên chiều cao và tăng độ dài đáy thêm 6 dm thì diện tích tăng thêm 9 dm². Tính độ dài cạnh đáy mới.</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q6" value="A"><b>A.</b><span class="ot">40 dm</span></label><label class="opt" data-k="B"><input type="radio" name="q6" value="B"><b>B.</b><span class="ot">38 dm</span></label><label class="opt" data-k="C"><input type="radio" name="q6" value="C"><b>C.</b><span class="ot">34 dm</span></label><label class="opt" data-k="D"><input type="radio" name="q6" value="D"><b>D.</b><span class="ot">28 dm</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q7" data-i="6"><span class="score-tag"></span><div class="q-head"><span class="num">7</span><span class="t">Câu 7</span></div><p class="st">Một tấm biển giới thiệu gồm một hình chữ nhật dài 2,5 m, rộng 1,6 m và một nửa hình tròn có đường kính 2,5 m gắn phía trên. Diện tích tấm biển là bao nhiêu? Kết quả làm tròn đến hàng phần trăm.</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q7" value="A"><b>A.</b><span class="ot">5,23 m²</span></label><label class="opt" data-k="B"><input type="radio" name="q7" value="B"><b>B.</b><span class="ot">6,45 m²</span></label><label class="opt" data-k="C"><input type="radio" name="q7" value="C"><b>C.</b><span class="ot">6,35 m²</span></label><label class="opt" data-k="D"><input type="radio" name="q7" value="D"><b>D.</b><span class="ot">7,14 m²</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q8" data-i="7"><span class="score-tag"></span><div class="q-head"><span class="num">8</span><span class="t">Câu 8</span></div><p class="st">Bánh xe của một chiếc xe đạp có đường kính 70 cm. Xe đi được quãng đường 14 287 m. Hỏi bánh xe lăn được bao nhiêu vòng?</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q8" value="A"><b>A.</b><span class="ot">6 250 vòng</span></label><label class="opt" data-k="B"><input type="radio" name="q8" value="B"><b>B.</b><span class="ot">6 400 vòng</span></label><label class="opt" data-k="C"><input type="radio" name="q8" value="C"><b>C.</b><span class="ot">6 425 vòng</span></label><label class="opt" data-k="D"><input type="radio" name="q8" value="D"><b>D.</b><span class="ot">6 500 vòng</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q9" data-i="8"><span class="score-tag"></span><div class="q-head"><span class="num">9</span><span class="t">Câu 9</span></div><p class="st">Một khu vườn hình chữ nhật dài 24 m, rộng 15 m. Trong khu vườn có một ao hình tròn bán kính 7 m. Diện tích phần đất còn lại là</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q9" value="A"><b>A.</b><span class="ot">196,14 m²</span></label><label class="opt" data-k="B"><input type="radio" name="q9" value="B"><b>B.</b><span class="ot">153,86 m²</span></label><label class="opt" data-k="C"><input type="radio" name="q9" value="C"><b>C.</b><span class="ot">206,14 m²</span></label><label class="opt" data-k="D"><input type="radio" name="q9" value="D"><b>D.</b><span class="ot">360 m²</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q10" data-i="9"><span class="score-tag"></span><div class="q-head"><span class="num">10</span><span class="t">Câu 10</span></div><p class="st">Một cuộn dây dài 2,75 m. Một thùng có 10 cuộn dây như vậy. Một cửa hàng nhập 100 thùng. Hỏi cửa hàng nhập tất cả bao nhiêu mét dây?</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q10" value="A"><b>A.</b><span class="ot">2 750 m</span></label><label class="opt" data-k="B"><input type="radio" name="q10" value="B"><b>B.</b><span class="ot">25 750 m</span></label><label class="opt" data-k="C"><input type="radio" name="q10" value="C"><b>C.</b><span class="ot">27 500 m</span></label><label class="opt" data-k="D"><input type="radio" name="q10" value="D"><b>D.</b><span class="ot">275 000 m</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q11" data-i="10"><span class="score-tag"></span><div class="q-head"><span class="num">11</span><span class="t">Câu 11</span></div><p class="st">Một hình tam giác có diện tích 63 cm² và chiều cao 9 cm. Độ dài đáy là</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q11" value="A"><b>A.</b><span class="ot">6 cm</span></label><label class="opt" data-k="B"><input type="radio" name="q11" value="B"><b>B.</b><span class="ot">9 cm</span></label><label class="opt" data-k="C"><input type="radio" name="q11" value="C"><b>C.</b><span class="ot">14 cm</span></label><label class="opt" data-k="D"><input type="radio" name="q11" value="D"><b>D.</b><span class="ot">18 cm</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q12" data-i="11"><span class="score-tag"></span><div class="q-head"><span class="num">12</span><span class="t">Câu 12</span></div><p class="st">Một hình thang có trung bình cộng độ dài hai đáy là 16 cm, chiều cao 9 cm. Diện tích hình thang là</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q12" value="A"><b>A.</b><span class="ot">270 cm²</span></label><label class="opt" data-k="B"><input type="radio" name="q12" value="B"><b>B.</b><span class="ot">150 cm²</span></label><label class="opt" data-k="C"><input type="radio" name="q12" value="C"><b>C.</b><span class="ot">146 cm²</span></label><label class="opt" data-k="D"><input type="radio" name="q12" value="D"><b>D.</b><span class="ot">144 cm²</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q13" data-i="12"><span class="score-tag"></span><div class="q-head"><span class="num">13</span><span class="t">Câu 13</span></div><p class="st">Tính bằng cách thuận tiện: 125 × 7,8 + 75 × 7,8</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q13" value="A"><b>A.</b><span class="ot">760</span></label><label class="opt" data-k="B"><input type="radio" name="q13" value="B"><b>B.</b><span class="ot">1200</span></label><label class="opt" data-k="C"><input type="radio" name="q13" value="C"><b>C.</b><span class="ot">1460</span></label><label class="opt" data-k="D"><input type="radio" name="q13" value="D"><b>D.</b><span class="ot">1560</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q14" data-i="13"><span class="score-tag"></span><div class="q-head"><span class="num">14</span><span class="t">Câu 14</span></div><p class="st">Tính giá trị của biểu thức: 2,68 × 1000 : 0,1</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q14" value="A"><b>A.</b><span class="ot">26 800</span></label><label class="opt" data-k="B"><input type="radio" name="q14" value="B"><b>B.</b><span class="ot">258 000</span></label><label class="opt" data-k="C"><input type="radio" name="q14" value="C"><b>C.</b><span class="ot">2 580</span></label><label class="opt" data-k="D"><input type="radio" name="q14" value="D"><b>D.</b><span class="ot">258</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q15" data-i="14"><span class="score-tag"></span><div class="q-head"><span class="num">15</span><span class="t">Câu 15</span></div><p class="st">Một khu vườn hình thang có đáy lớn 18 m, đáy bé 12 m và chiều cao 8 m. Người ta dùng toàn bộ khu vườn để trồng hoa. Diện tích khu vườn là</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q15" value="A"><b>A.</b><span class="ot">144 m²</span></label><label class="opt" data-k="B"><input type="radio" name="q15" value="B"><b>B.</b><span class="ot">96 m²</span></label><label class="opt" data-k="C"><input type="radio" name="q15" value="C"><b>C.</b><span class="ot">240 m²</span></label><label class="opt" data-k="D"><input type="radio" name="q15" value="D"><b>D.</b><span class="ot">120 m²</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q16" data-i="15"><span class="score-tag"></span><div class="q-head"><span class="num">16</span><span class="t">Câu 16</span></div><p class="st">Tính chu vi một hình tròn có bán kính bằng 6 cm</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q16" value="A"><b>A.</b><span class="ot">37,68 cm</span></label><label class="opt" data-k="B"><input type="radio" name="q16" value="B"><b>B.</b><span class="ot">15,7 cm</span></label><label class="opt" data-k="C"><input type="radio" name="q16" value="C"><b>C.</b><span class="ot">78,6 cm</span></label><label class="opt" data-k="D"><input type="radio" name="q16" value="D"><b>D.</b><span class="ot">26 cm</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q17" data-i="16"><span class="score-tag"></span><div class="q-head"><span class="num">17</span><span class="t">Câu 17</span></div><p class="st">Tính diện tích một hình tam giác có đáy 14 cm và chiều cao 8 cm.</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q17" value="A"><b>A.</b><span class="ot">56 cm²</span></label><label class="opt" data-k="B"><input type="radio" name="q17" value="B"><b>B.</b><span class="ot">96 cm²</span></label><label class="opt" data-k="C"><input type="radio" name="q17" value="C"><b>C.</b><span class="ot">40 cm²</span></label><label class="opt" data-k="D"><input type="radio" name="q17" value="D"><b>D.</b><span class="ot">24 cm²</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q18" data-i="17"><span class="score-tag"></span><div class="q-head"><span class="num">18</span><span class="t">Câu 18</span></div><p class="st">Biết mỗi tấm thẻ dày 0,3 mm. Hỏi một chồng thiệp dày 54 mm thì có bao nhiêu tấm?</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q18" value="A"><b>A.</b><span class="ot">150 tấm</span></label><label class="opt" data-k="B"><input type="radio" name="q18" value="B"><b>B.</b><span class="ot">170 tấm</span></label><label class="opt" data-k="C"><input type="radio" name="q18" value="C"><b>C.</b><span class="ot">180 tấm</span></label><label class="opt" data-k="D"><input type="radio" name="q18" value="D"><b>D.</b><span class="ot">200 tấm</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q19" data-i="18"><span class="score-tag"></span><div class="q-head"><span class="num">19</span><span class="t">Câu 19</span></div><p class="st">Điền số thích hợp vào chỗ chấm sau: 46,6 × ... = 466 000</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q19" value="A"><b>A.</b><span class="ot">1 000</span></label><label class="opt" data-k="B"><input type="radio" name="q19" value="B"><b>B.</b><span class="ot">10 000</span></label><label class="opt" data-k="C"><input type="radio" name="q19" value="C"><b>C.</b><span class="ot">100 000</span></label><label class="opt" data-k="D"><input type="radio" name="q19" value="D"><b>D.</b><span class="ot">0,001</span></label></div><div class="fb" aria-live="polite"></div></div><div class="card q" id="q20" data-i="19"><span class="score-tag"></span><div class="q-head"><span class="num">20</span><span class="t">Câu 20</span></div><p class="st">Tích của hai thừa số 4,35 và 100 là</p><div class="opts"><label class="opt" data-k="A"><input type="radio" name="q20" value="A"><b>A.</b><span class="ot">43,5</span></label><label class="opt" data-k="B"><input type="radio" name="q20" value="B"><b>B.</b><span class="ot">435</span></label><label class="opt" data-k="C"><input type="radio" name="q20" value="C"><b>C.</b><span class="ot">4350</span></label><label class="opt" data-k="D"><input type="radio" name="q20" value="D"><b>D.</b><span class="ot">4,350</span></label></div><div class="fb" aria-live="polite"></div></div>
+<div class="submit-zone"><button class="btn" id="submitBtn" type="button">Nộp bài</button><p id="msg" role="alert"></p></div>
+<div class="card" id="result" tabindex="-1"><div class="em" id="rEm"></div><div class="sc" id="rSc"></div><div class="s10" id="r10"></div><p id="rMsg" class="rmsg"></p><p class="note" id="rSend"></p><button class="btn green" id="retryBtn" type="button">Làm lại từ đầu</button></div>
+</div>
+<script>
+var CFG={"gas": "https://script.google.com/macros/s/AKfycby_OmwTYAGJ5BdCL-u2lTPFqYsBMLqLtmeFUTeQYF52w0Nk-H0KlrvoWjINA5K0js1lIw/exec", "bai": "Tổng hợp tuần 14-17", "total": 19};
+var QS=[{"no": 1, "t": "mc", "u": [{"label": "Câu 1", "ans": ["C"]}], "ansh": "<b>C.</b> 240 m²", "sol": "Chiều cao 48 × 2 : 6 = 16 m; đáy 60 × 2 : 4 = 30 m; diện tích 30 × 16 : 2 = 240 m²", "multi": false}, {"no": 2, "t": "loi", "u": [], "ansh": "", "sol": "Số liệu đề không khớp: tổng hai đáy 126 × 2 : 9 = 28 cm, đáy lớn gấp đôi đáy bé thì đáy lớn không tròn (18,67 cm), không phương án nào đúng", "multi": false}, {"no": 3, "t": "mc", "u": [{"label": "Câu 3", "ans": ["C"]}], "ansh": "<b>C.</b> 477,28 cm²", "sol": "Bán kính 131,88 : 6,28 = 21 cm; diện tích giảm (21 × 21 − 17 × 17) × 3,14 = 477,28 cm²", "multi": false}, {"no": 4, "t": "mc", "u": [{"label": "Câu 4", "ans": ["B"]}], "ansh": "<b>B.</b> 64 cm", "sol": "Hình vuông có diện tích 256 cm² nên cạnh 16 cm; chu vi 64 cm", "multi": false}, {"no": 5, "t": "mc", "u": [{"label": "Câu 5", "ans": ["C"]}], "ansh": "<b>C.</b> 240 m²", "sol": "Chiều cao 60 × 2 : 8 = 15 m; diện tích lúc sau (24 + 8) × 15 : 2 = 240 m²", "multi": false}, {"no": 6, "t": "mc", "u": [{"label": "Câu 6", "ans": ["C"]}], "ansh": "<b>C.</b> 34 dm", "sol": "Chiều cao 9 × 2 : 6 = 3 dm; đáy cũ 42 × 2 : 3 = 28 dm; đáy mới 34 dm", "multi": false}, {"no": 7, "t": "mc", "u": [{"label": "Câu 7", "ans": ["B"]}], "ansh": "<b>B.</b> 6,45 m²", "sol": "2,5 × 1,6 = 4 m²; nửa hình tròn 1,25 × 1,25 × 3,14 : 2 = 2,453125 m²; tổng ≈ 6,45 m²", "multi": false}, {"no": 8, "t": "mc", "u": [{"label": "Câu 8", "ans": ["D"]}], "ansh": "<b>D.</b> 6 500 vòng", "sol": "Chu vi bánh xe 70 × 3,14 = 219,8 cm = 2,198 m; 14 287 : 2,198 = 6 500 vòng", "multi": false}, {"no": 9, "t": "mc", "u": [{"label": "Câu 9", "ans": ["C"]}], "ansh": "<b>C.</b> 206,14 m²", "sol": "24 × 15 − 7 × 7 × 3,14 = 360 − 153,86 = 206,14 m²", "multi": false}, {"no": 10, "t": "mc", "u": [{"label": "Câu 10", "ans": ["A"]}], "ansh": "<b>A.</b> 2 750 m", "sol": "2,75 × 10 × 100 = 2 750 m", "multi": false}, {"no": 11, "t": "mc", "u": [{"label": "Câu 11", "ans": ["C"]}], "ansh": "<b>C.</b> 14 cm", "sol": "Đáy 63 × 2 : 9 = 14 cm", "multi": false}, {"no": 12, "t": "mc", "u": [{"label": "Câu 12", "ans": ["D"]}], "ansh": "<b>D.</b> 144 cm²", "sol": "16 × 9 = 144 cm²", "multi": false}, {"no": 13, "t": "mc", "u": [{"label": "Câu 13", "ans": ["D"]}], "ansh": "<b>D.</b> 1560", "sol": "(125 + 75) × 7,8 = 1 560", "multi": false}, {"no": 14, "t": "mc", "u": [{"label": "Câu 14", "ans": ["A"]}], "ansh": "<b>A.</b> 26 800", "sol": "2,68 × 1000 : 0,1 = 26 800", "multi": false}, {"no": 15, "t": "mc", "u": [{"label": "Câu 15", "ans": ["D"]}], "ansh": "<b>D.</b> 120 m²", "sol": "(18 + 12) × 8 : 2 = 120 m²", "multi": false}, {"no": 16, "t": "mc", "u": [{"label": "Câu 16", "ans": ["A"]}], "ansh": "<b>A.</b> 37,68 cm", "sol": "6 × 2 × 3,14 = 37,68 cm", "multi": false}, {"no": 17, "t": "mc", "u": [{"label": "Câu 17", "ans": ["A"]}], "ansh": "<b>A.</b> 56 cm²", "sol": "14 × 8 : 2 = 56 cm²", "multi": false}, {"no": 18, "t": "mc", "u": [{"label": "Câu 18", "ans": ["C"]}], "ansh": "<b>C.</b> 180 tấm", "sol": "54 : 0,3 = 180 tấm", "multi": false}, {"no": 19, "t": "mc", "u": [{"label": "Câu 19", "ans": ["B"]}], "ansh": "<b>B.</b> 10 000", "sol": "46,6 × 10 000 = 466 000", "multi": false}, {"no": 20, "t": "mc", "u": [{"label": "Câu 20", "ans": ["B"]}], "ansh": "<b>B.</b> 435", "sol": "4,35 × 100 = 435", "multi": false}];
+(function(){
+"use strict";
+function $(id){return document.getElementById(id);}
+var LOP_LINK=(new URLSearchParams(location.search).get('lop')||'').trim();
+var sound=true,ctx=null,done={},graded=false,pend=0;
+var PRAISE=["Giỏi quá!","Chính xác!","Tuyệt vời!","Em làm rất tốt!","Hay lắm!","Đúng rồi, siêu quá!"];
+var COMF=["Không sao, em xem lại lời giải nhé.","Cố lên, lần sau em sẽ làm đúng!","Gần được rồi, xem đáp án nhé.","Sai một chút thôi, em đọc lời giải nhé."];
+var pi=0,ci=0;
+function audio(){try{if(!ctx){var C=window.AudioContext||window.webkitAudioContext;if(C)ctx=new C();}if(ctx&&ctx.state==="suspended")ctx.resume();}catch(e){}return ctx;}
+function tone(f,t0,d,type,vol){var c=audio();if(!c)return;try{var o=c.createOscillator(),g=c.createGain();o.type=type||"sine";o.frequency.value=f;g.gain.setValueAtTime(0.0001,c.currentTime+t0);g.gain.exponentialRampToValueAtTime(vol||0.2,c.currentTime+t0+0.02);g.gain.exponentialRampToValueAtTime(0.0001,c.currentTime+t0+d);o.connect(g);g.connect(c.destination);o.start(c.currentTime+t0);o.stop(c.currentTime+t0+d+0.05);}catch(e){}}
+function sOk(){if(!sound)return;tone(880,0,0.18,"sine",0.22);tone(1320,0.12,0.28,"sine",0.2);}
+function sBad(){if(!sound)return;tone(196,0,0.28,"triangle",0.16);tone(165,0.14,0.3,"triangle",0.12);}
+$("muteBtn").addEventListener("click",function(){sound=!sound;this.textContent=sound?"🔊":"🔇";this.setAttribute("aria-pressed",sound?"false":"true");if(sound)audio();});
+/* ---- chuẩn hóa so sánh ---- */
+function norm(s){return String(s==null?"":s).replace(/[\s ]+/g,"").replace(/,/g,".").toLowerCase();}
+function num(s){if(/^-?\d+(\.\d+)?$/.test(s))return parseFloat(s);return null;}
+function eqAns(user,alts){
+  var u=norm(user);if(!u)return false;
+  for(var i=0;i<alts.length;i++){
+    var a=norm(alts[i]);
+    if(u===a)return true;
+    var na=num(a),nu=num(u);
+    if(na!==null){
+      if(nu!==null&&nu===na)return true;
+      if(/^\d{1,3}(\.\d{3})+$/.test(u)&&Math.abs(parseFloat(u.replace(/\./g,""))-na)<1e-9&&Number.isInteger(na))return true;
+      var m=u.match(/^(-?[\d.]+)([a-zA-Z%²³°\/]+.*)$/);
+      if(m&&num(m[1])===na)return true;
+    }
+  }
+  return false;
+}
+/* ---- dựng trạng thái ---- */
+var qEl=[];
+QS.forEach(function(q,i){qEl[i]=$("q"+q.no);});
+var scored=QS.filter(function(q){return q.t!=="loi";});
+function prog(){var n=Object.keys(done).length;$("barFill").style.width=Math.round(100*n/scored.length)+"%";$("barTxt").textContent=n+"/"+scored.length;}
+function unitTotal(){return scored.reduce(function(s,q){return s+q.u.length;},0);}
+function readAnswer(card,q){
+  var r=[];
+  if(q.t==="fill"){card.querySelectorAll(".fi").forEach(function(e){r.push(e.value);});}
+  return r;
+}
+function gradeQ(i,silent){
+  var q=QS[i],card=qEl[i];if(!card||done[i]!==undefined||q.t==="loi")return;
+  var res=[],earned=0;
+  if(q.t==="fill"){
+    var ins=card.querySelectorAll(".fi");
+    q.u.forEach(function(u,k){var inp=ins[k],ok=!!inp&&eqAns(inp.value,u.ans);if(inp){inp.classList.add(ok?"right":"wrong");inp.readOnly=true;}res.push(ok);});
+  }else{
+    var sel=[];
+    if(q.t==="cmp"){var b=card.querySelector(".cmpb.sel");if(b)sel=[b.getAttribute("data-k")];}
+    else card.querySelectorAll("input:checked").forEach(function(e){sel.push(e.value);});
+    var corr=q.u[0].ans[0].split(",").sort().join(","),ok=sel.slice().sort().join(",")===corr;
+    res.push(ok);
+    var cs=corr.split(",");
+    card.querySelectorAll(".opt,.cmpb").forEach(function(o){var k=o.getAttribute("data-k");var isC=cs.indexOf(k)>=0,isS=sel.indexOf(k)>=0;if(isC)o.classList.add("right");else if(isS)o.classList.add("wrong");var inp=o.querySelector("input");if(inp)inp.disabled=true;});
+    card.querySelectorAll(".cmpb").forEach(function(o){o.disabled=true;});
+  }
+  res.forEach(function(r){if(r)earned++;});
+  done[i]={res:res,earned:earned};
+  var all=earned===res.length;
+  card.classList.add(all?"ok":"bad");card.classList.add("graded");
+  var ch=card.querySelector(".chk");if(ch)ch.disabled=true;
+  var tag=card.querySelector(".score-tag");if(tag){tag.textContent=earned+" / "+res.length+" điểm";tag.className="score-tag "+(all?"full":(earned===0?"zero":"part"));}
+  var fb=card.querySelector(".fb");
+  var vd=all?("Đúng rồi! "+PRAISE[pi++%PRAISE.length]):("Chưa đúng. "+COMF[ci++%COMF.length]);
+  var h='<div class="vd">'+(all?"✅ ":"💡 ")+vd+'</div>';
+  if(!all||q.t==="fill")h+='<div>Đáp án đúng: '+q.ansh+'</div>';
+  if(q.sol)h+='<div class="sl">Lời giải: '+q.sol+'</div>';
+  fb.innerHTML=h;
+  card.classList.add("graded");
+  if(!silent){if(all){sOk();card.classList.add("pop");spark(card);}else sBad();}
+  prog();
+}
+function spark(card){var s=["⭐","✨","🌟"];for(var k=0;k<4;k++){var e=document.createElement("span");e.className="spark";e.textContent=s[k%3];e.style.left=(20+k*20)+"%";e.style.top="8px";card.appendChild(e);(function(x){setTimeout(function(){x.remove();},1100);})(e);}}
+QS.forEach(function(q,i){
+  var card=qEl[i];if(!card||q.t==="loi")return;
+  if(q.t==="mc"&&!q.multi)card.querySelectorAll(".opt input").forEach(function(inp){inp.addEventListener("change",function(){audio();gradeQ(i);});});
+  if(q.t==="cmp")card.querySelectorAll(".cmpb").forEach(function(b){b.addEventListener("click",function(){audio();b.classList.add("sel");gradeQ(i);});});
+  if(q.t==="mc"&&q.multi||q.t==="fill"){
+    var ch=card.querySelector(".chk");
+    function upd(){if(!ch||done[i]!==undefined)return;var any=false;if(q.t==="fill"){card.querySelectorAll(".fi").forEach(function(e){if(e.value.trim())any=true;});}else{any=!!card.querySelector("input:checked");}ch.disabled=!any;}
+    card.addEventListener("input",upd);card.addEventListener("change",upd);
+    if(ch)ch.addEventListener("click",function(){audio();gradeQ(i);});
+    card.querySelectorAll(".fi").forEach(function(e){e.addEventListener("keydown",function(ev){if(ev.key==="Enter"){ev.preventDefault();if(ch&&!ch.disabled){audio();gradeQ(i);}}});});
+  }
+});
+prog();
+/* ---- họ tên / lớp ---- */
+var nm=$("studentName"),cl=$("studentClass");
+if(LOP_LINK){cl.value=LOP_LINK;cl.readOnly=true;
+  var tm=setTimeout(function(){},0),got=false;
+  try{
+    var ctl=("AbortController" in window)?new AbortController():null;
+    var to=setTimeout(function(){if(ctl)ctl.abort();},5000);
+    fetch(CFG.gas+"?action=roster&lop="+encodeURIComponent(LOP_LINK),ctl?{signal:ctl.signal}:{}).then(function(r){return r.json();}).then(function(d){clearTimeout(to);
+      if(d&&d.ok&&d.names&&d.names.length){
+        var box=document.createElement("div");box.className="nm-list";box.id="nmList";
+        d.names.forEach(function(n){var b=document.createElement("button");b.type="button";b.textContent=n;b.addEventListener("click",function(){box.querySelectorAll("button").forEach(function(x){x.classList.remove("on");});b.classList.add("on");nm.value=n;nm.type="hidden";});box.appendChild(b);});
+        var o=document.createElement("button");o.type="button";o.textContent="Tên con không có trong danh sách";o.addEventListener("click",function(){box.remove();nm.type="text";nm.value="";nm.focus();});box.appendChild(o);
+        nm.type="hidden";nm.parentNode.appendChild(box);
+      }}).catch(function(){clearTimeout(to);});
+  }catch(e){}
+}
+/* ---- nộp bài ---- */
+var warned=false;
+$("submitBtn").addEventListener("click",function(){
+  if(graded)return;
+  var msg=$("msg");
+  var nmv=nm.value.trim(),clv=cl.value.trim();
+  if(!nmv||!clv){msg.textContent=!nmv&&$("nmList")?"Em hãy chọn tên của mình trong danh sách nhé!":"Em hãy điền họ tên và lớp trước khi nộp bài nhé!";(nmv?cl:(nm.type==="hidden"?$("nmList"):nm)).scrollIntoView({block:"center"});return;}
+  var left=0;QS.forEach(function(q,i){if(q.t!=="loi"&&done[i]===undefined)left++;});
+  if(left>0&&!warned){warned=true;msg.textContent="Em còn "+left+" câu chưa làm. Em kiểm tra lại nhé. Nếu vẫn muốn nộp, hãy bấm “Nộp bài” lần nữa.";return;}
+  msg.textContent="";graded=true;
+  QS.forEach(function(q,i){if(q.t!=="loi")gradeQ(i,true);});
+  var earned=0,total=0,wrong=[];
+  QS.forEach(function(q,i){if(q.t==="loi")return;var d=done[i];q.u.forEach(function(u,k){total++;if(d.res[k])earned++;else if(wrong.indexOf(u.label)<0)wrong.push(u.label);});});
+  $("submitBtn").disabled=true;nm.disabled=true;
+  var loplink=LOP_LINK;
+  try{fetch(CFG.gas,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({bai:CFG.bai,hoten:nmv,lop:clv,loplink:loplink,diem:earned,tongdiem:total,causai:wrong.join(", ")})}).then(function(){$("rSend").textContent="Bài của em đã được gửi cho cô giáo.";}).catch(function(){$("rSend").textContent="Chưa gửi được bài, em kiểm tra mạng rồi báo cô nhé.";});}catch(e){}
+  var pct=total?earned/total:0,em,m;
+  if(pct>=.9){em="🏆";m="Tuyệt vời! Em làm bài rất xuất sắc!";}
+  else if(pct>=.7){em="🌟";m="Rất tốt! Em xem lại các câu đỏ để giỏi hơn nữa nhé.";}
+  else if(pct>=.5){em="👍";m="Khá lắm! Em đọc lời giải các câu sai rồi thử lại nhé.";}
+  else{em="🌱";m="Đừng lo, em xem lại lời giải rồi làm lại, em sẽ tiến bộ!";}
+  if(pct>=.7&&sound){sOk();}
+  $("rEm").textContent=em;$("rSc").textContent=earned+" / "+total+" điểm";
+  $("r10").textContent="Quy ra thang 10: "+(Math.round(pct*100)/10).toString().replace(".",",")+" điểm";
+  $("rMsg").textContent=nmv+" ơi, "+m;
+  $("result").classList.add("show");$("result").scrollIntoView({behavior:"smooth",block:"center"});
+});
+$("retryBtn").addEventListener("click",function(){location.reload();});
+window.__test={QS:QS,done:done,gradeQ:gradeQ,eqAns:eqAns};
+})();
+
+</script>
+</body>
+</html>
