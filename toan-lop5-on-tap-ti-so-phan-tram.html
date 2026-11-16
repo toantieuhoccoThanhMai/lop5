@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toán 5 – Ôn tập tỉ số phần trăm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,500;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>:root{--leaf:#2f8f5b;--leaf-dark:#1f6a42;--leaf-soft:#e3f5ea;--sky:#dff1fb;--sun:#ffb53d;--petal:#f26d85;--ink:#23402f;--paper:#fffdf6;--line:#d6e6d9;--ok:#1f9d63;--ok-bg:#e2f7eb;--bad:#e04f4f;--bad-bg:#fdeaea}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Nunito',system-ui,Arial,sans-serif;color:var(--ink);font-size:17px;line-height:1.6;background:linear-gradient(180deg,#dff1fb 0,#eef8ee 420px,#f4faef 100%)}
+h1,h2,h3{font-family:'Baloo 2','Nunito',system-ui,sans-serif;line-height:1.2;margin:0}
+.wrap{max-width:820px;margin:0 auto;padding:0 14px 80px}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,253,246,.94);backdrop-filter:blur(6px);border-bottom:2px solid var(--line)}
+.tb-in{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:6px 14px}
+.bar{flex:1;height:12px;background:#e4efe6;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6cc17a,#ffb53d);border-radius:99px;transition:width .35s}
+#barTxt{font-weight:800;font-size:14px;color:var(--leaf-dark);min-width:44px;text-align:right}
+#muteBtn{border:2px solid var(--line);background:#fff;border-radius:50%;width:38px;height:38px;font-size:18px;cursor:pointer;line-height:1}
+.hero{position:relative;margin:0 -14px;overflow:hidden}
+.hero svg{display:block;width:100%;height:auto}
+.hero-title{position:absolute;left:0;right:0;top:4%;text-align:center;padding:0 12px}
+.hero-title .wk{display:inline-block;background:#fff;color:var(--leaf-dark);font-weight:800;border-radius:999px;padding:3px 16px;font-size:15px;box-shadow:0 3px 0 rgba(31,106,66,.18)}
+.hero-title h1{font-size:clamp(30px,8.5vw,56px);color:#fff;font-weight:800;text-shadow:0 3px 0 var(--leaf-dark),0 6px 14px rgba(31,106,66,.35);margin-top:4px}
+.card{background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:20px 18px;margin-top:18px;box-shadow:0 6px 0 #cfe3d2}
+.info{display:grid;grid-template-columns:1fr 130px;gap:12px}
+.info label{font-weight:800;font-size:15px;display:block;margin-bottom:4px}
+.info input{width:100%;font:inherit;padding:11px 14px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}
+.info input[readonly]{background:#eef5ee;font-weight:800}
+.nm-list{display:flex;flex-wrap:wrap;gap:8px}
+.nm-list button{font:inherit;font-weight:700;border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer;color:var(--ink)}
+.nm-list button.on{background:var(--leaf);border-color:var(--leaf-dark);color:#fff}
+input:focus,button:focus-visible,.opt:focus-within{outline:3px solid var(--sun);outline-offset:2px}
+.section-h{display:flex;align-items:center;gap:12px;margin:30px 0 0}
+.section-h .ico{flex:none;width:54px;height:54px}
+.section-h h2{font-size:28px;color:var(--leaf-dark)}
+.section-h p{margin:0;font-size:15px;color:#557a63}
+.q{position:relative;transition:background .25s,border-color .25s}
+.q-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--leaf);color:#fff;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:20px;display:grid;place-items:center;box-shadow:0 3px 0 var(--leaf-dark)}
+.q-head .t{font-weight:800;font-size:18px}
+.st{margin:6px 0;font-size:18px;overflow-wrap:anywhere}
+.mt{font-family:'Nunito','Times New Roman',serif;white-space:normal}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 2px;line-height:1.15;font-size:.92em}
+.fr .n{border-bottom:2px solid currentColor;padding:0 3px}
+.fr .d{padding:0 3px}
+.fig{margin:10px 0;text-align:center}
+.fig img,.fig svg{max-width:100%;height:auto;border-radius:12px;border:2px solid var(--line);background:#fff;max-height:340px}
+.fig svg{width:min(100%,460px)}
+.tw{overflow-x:auto;margin:8px 0}
+.dt{border-collapse:collapse;font-size:16px;background:#fff}
+.dt th,.dt td{border:2px solid var(--line);padding:6px 12px;text-align:center}
+.dt th{background:var(--leaf-soft)}
+.opts{margin-top:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--line);border-radius:14px;padding:11px 14px;margin-top:9px;cursor:pointer;background:#fff;min-height:48px}
+.opt input{margin-top:5px;accent-color:var(--leaf);width:20px;height:20px;flex:none}
+.opt:has(input:checked){border-color:var(--leaf);background:var(--leaf-soft)}
+.opt b{flex:none}
+.opt .ot{flex:1;min-width:0}
+.opt .fig{margin:4px 0}.opt .fig svg,.opt .fig img{max-height:130px}
+.cmprow{display:flex;gap:12px;margin-top:10px}
+.cmpb{flex:1;font:inherit;font-weight:800;font-size:30px;border:2px solid var(--line);background:#fff;border-radius:16px;padding:6px 0;cursor:pointer;color:var(--leaf-dark);min-height:56px}
+.cmpb:hover{background:var(--leaf-soft)}
+.fi{font:inherit;font-weight:800;font-size:18px;width:130px;max-width:46vw;padding:4px 10px;border:2px solid var(--leaf);border-radius:12px;background:var(--leaf-soft);color:var(--leaf-dark);text-align:center;vertical-align:middle;margin:2px 3px;min-height:42px}
+.frow{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
+.fl{font-weight:800}
+.note{font-size:14.5px;color:#557a63;margin:8px 0 0}.note.warn{color:#b36b00;font-weight:800}
+.btn{font-family:'Baloo 2','Nunito',sans-serif;font-weight:800;font-size:22px;border:0;border-radius:999px;padding:12px 38px;cursor:pointer;background:var(--sun);color:#5a3a00;box-shadow:0 6px 0 #d18a12}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #d18a12}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.small{font-size:17px;padding:8px 24px;margin-top:12px;background:var(--leaf);color:#fff;box-shadow:0 5px 0 var(--leaf-dark)}
+.btn.green{background:var(--leaf);color:#fff;box-shadow:0 6px 0 var(--leaf-dark);font-size:18px;padding:9px 28px}
+.fb{display:none;margin-top:12px;border-radius:14px;padding:12px 14px;font-size:16.5px}
+.graded .fb{display:block}
+.fb .vd{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:21px}
+.fb .sl{margin-top:6px;color:#3b5a47}
+.q.ok{background:#f2fbf5;border-color:var(--ok)}
+.q.ok .fb{background:var(--ok-bg)}.q.ok .vd{color:var(--ok)}
+.q.bad{background:#fff8f8;border-color:#efb0b0}
+.q.bad .fb{background:var(--bad-bg)}.q.bad .vd{color:var(--bad)}
+.opt.right{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.cmpb.right{border-color:var(--ok);background:var(--ok-bg)}
+.cmpb.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.fi.right{border-color:var(--ok);background:var(--ok-bg)}
+.fi.wrong{border-color:var(--bad);background:var(--bad-bg);text-decoration:line-through}
+.score-tag{display:none;position:absolute;top:-13px;right:14px;font-weight:800;font-size:14px;border-radius:999px;padding:2px 12px;color:#fff}
+.graded .score-tag{display:block}
+.score-tag.full{background:var(--ok)}.score-tag.part{background:#e59a1c}.score-tag.zero{background:var(--bad)}
+.graded .opt,.graded .cmpb{cursor:default}
+.loi{border-style:dashed}
+.submit-zone{text-align:center;margin-top:30px}
+#msg{color:var(--bad);font-weight:800;min-height:26px;margin:10px 0 0}
+#result{display:none;text-align:center;background:linear-gradient(180deg,#fff8e1,#fffdf6);border-color:var(--sun);box-shadow:0 6px 0 #f0cf86}
+#result.show{display:block}
+#result .em{font-size:60px;line-height:1}
+#result .sc{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:46px;color:var(--leaf-dark);line-height:1.1}
+#result .s10{font-weight:800;color:#b36b00}
+.rmsg{font-weight:800;margin:8px 0}
+.pop{animation:pop .5s ease-out}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.025)}100%{transform:scale(1)}}
+.spark{position:absolute;pointer-events:none;font-size:20px;animation:sp 1s ease-out forwards}
+@keyframes sp{from{opacity:1;transform:translateY(0) scale(.6)}to{opacity:0;transform:translateY(-46px) scale(1.2)}}
+@media (max-width:600px){body{font-size:16px}.info{grid-template-columns:1fr}.st{font-size:17px}.fi{width:104px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pop,.spark{animation:none}.bar i{transition:none}}
+
+.symrow{display:inline-flex;gap:6px;vertical-align:middle;margin:2px 4px}
+.symrow button{font:inherit;font-weight:800;font-size:22px;width:44px;height:44px;border:2px solid var(--line);background:#fff;border-radius:12px;cursor:pointer;color:var(--leaf-dark)}
+.symrow button.sel{border-color:var(--leaf);background:var(--leaf-soft)}
+.symrow button.right{border-color:var(--ok);background:var(--ok-bg)}
+.symrow button.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.q.shown .fb{display:block;background:#eef6ff}
+.q.self{border-style:dashed}
+.q.self .fb .vd{color:#2c6aa8}
+.part-h{margin:34px 0 0;font-size:24px;color:var(--leaf-dark)}
+
+.cloud{animation:drift 30s linear infinite alternate}
+.cloud.c2{animation-duration:42s;animation-delay:-8s}
+@keyframes drift{to{transform:translateX(46px)}}
+.fly{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.fly.d1{animation-delay:-1.3s}.fly.d2{animation-delay:-2.6s}
+@keyframes bob{50%{transform:translate(6px,-10px) rotate(3deg)}}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+@keyframes tw{50%{opacity:.4}}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.spin{animation:spin 24s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.drive{animation:drive 9s linear infinite}
+@keyframes drive{from{transform:translateX(-120px)}to{transform:translateX(880px)}}
+.grow{animation:grow 4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.grow.d1{animation-delay:-1s}.grow.d2{animation-delay:-2s}.grow.d3{animation-delay:-3s}
+@keyframes grow{50%{transform:scaleY(.82)}}
+.swing{animation:swing 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
+@keyframes swing{50%{transform:rotate(7deg)}}
+.hand{animation:spin 40s linear infinite;transform-box:view-box;transform-origin:0 0}
+@media (prefers-reduced-motion:reduce){.cloud,.fly,.twinkle,.sway,.spin,.drive,.grow,.swing,.hand{animation:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="tb-in"><div class="bar"><i id="barFill"></i></div><span id="barTxt">0/39</span><button type="button" id="muteBtn" aria-label="Bật hoặc tắt âm thanh" aria-pressed="false">🔊</button></div></div>
+<div class="wrap">
+<div class="hero"><svg viewBox="0 0 820 400" role="img" aria-label="Tranh vẽ buổi sáng đẹp trời: cửa hàng giảm giá với biển phần trăm và biểu đồ hình tròn" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fc0ec"/><stop offset=".62" stop-color="#cfeaf6"/><stop offset="1" stop-color="#ffe4c9"/></linearGradient>
+<radialGradient id="sunG" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3b0"/><stop offset=".55" stop-color="#ffc94d"/><stop offset="1" stop-color="#ffc94d" stop-opacity="0"/></radialGradient></defs>
+<rect width="820" height="400" fill="url(#sky)"/>
+<g class="twinkle"><circle cx="705" cy="105" r="88" fill="url(#sunG)"/></g><circle cx="705" cy="105" r="38" fill="#ffb53d"/>
+<g class="cloud" fill="#fff" opacity=".92"><ellipse cx="120" cy="150" rx="48" ry="16"/><ellipse cx="150" cy="140" rx="32" ry="15"/></g>
+<g class="cloud c2" fill="#fff" opacity=".9"><ellipse cx="520" cy="190" rx="42" ry="13"/><ellipse cx="546" cy="182" rx="26" ry="12"/></g>
+<path d="M0 300 Q170 238 340 292 T650 276 T820 292 V400 H0Z" fill="#a9dba0"/>
+<path d="M0 340 Q230 292 440 332 T820 322 V400 H0Z" fill="#6cc17a"/>
+<g><rect x="470" y="226" width="240" height="116" rx="6" fill="#fff3d6" stroke="#c99a5b" stroke-width="3"/><path d="M458 232 H722 L702 192 H478Z" fill="#e8534a" stroke="#9b2a22" stroke-width="3" stroke-linejoin="round"/><path d="M478 192 l-20 40 M530 192 l-10 40 M582 192 l0 40 M634 192 l10 40 M686 192 l16 40" stroke="#fff" stroke-width="5"/><rect x="500" y="262" width="80" height="80" fill="#bfe6f7" stroke="#8b5a2b" stroke-width="3"/><rect x="620" y="262" width="60" height="80" fill="#b9714a"/><g class="swing" style="transform-origin:640px 232px"><path d="M640 232 v18" stroke="#8b5a2b" stroke-width="3"/><rect x="618" y="250" width="44" height="30" rx="6" fill="#ffd23d" stroke="#a8620a" stroke-width="3"/><text x="640" y="272" text-anchor="middle" font-family="Baloo 2,Arial" font-weight="800" font-size="22" fill="#e8534a">%</text></g></g><g class="fly"><circle cx="210" cy="250" r="58" fill="#fff" stroke="#3a6ea5" stroke-width="4"/><path d="M210 250 V192 A58 58 0 0 1 266 237Z" fill="#f26d85"/><path d="M210 250 L266 237 A58 58 0 0 1 188 306Z" fill="#ffb53d"/><text x="232" y="228" text-anchor="middle" font-family="Baloo 2,Arial" font-weight="800" font-size="18" fill="#fff">%</text></g><g transform="translate(380 352) scale(0.8)"><rect x="-6" y="-40" width="12" height="44" fill="#8b5a2b"/><g class="sway"><circle cx="0" cy="-66" r="30" fill="#2f8f5b"/><circle cx="-20" cy="-48" r="22" fill="#48b06f"/><circle cx="20" cy="-48" r="22" fill="#2f8f5b"/></g></g><g transform="translate(780 352) scale(0.7)"><rect x="-6" y="-40" width="12" height="44" fill="#8b5a2b"/><g class="sway"><circle cx="0" cy="-66" r="30" fill="#2f8f5b"/><circle cx="-20" cy="-48" r="22" fill="#48b06f"/><circle cx="20" cy="-48" r="22" fill="#2f8f5b"/></g></g><g transform="translate(60 372)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#f26d85"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(330 376)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#fff"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(520 372)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#b98cf0"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(770 376)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#f26d85"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g></svg><div class="hero-title"><span class="wk">Toán 5 – Ôn tập</span><h1>Ôn tập tỉ số phần trăm</h1></div></div>
+<div class="card info">
+  <div><label for="studentName">Họ và tên của em</label><input id="studentName" type="text" autocomplete="name" placeholder="Nhập họ và tên của em..."></div>
+  <div><label for="studentClass">Lớp</label><input id="studentClass" type="text" placeholder="VD: 5A"></div>
+</div>
+<div class="section-h"><svg class="ico" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="27" fill="#ffd9e0"/><text x="27" y="35" text-anchor="middle" font-family="Baloo 2,Nunito,Arial" font-weight="800" font-size="22" fill="#1f6a42">%</text></svg><div><h2>Ôn tập tỉ số phần trăm</h2><p>Câu chọn đáp án hoặc điền số máy chấm ngay. Câu mở em tự đối chiếu đáp án mẫu.</p></div></div>
+<div class="card q" id="qb1"><span class="score-tag"></span><div class="q-head"><span class="num">1</span><span class="t">Bài 1</span></div><p class="st">Tìm tỉ số phần trăm của hai số:</p><p class="st">a) 14 và 20</p><p class="st">b) 3,6 và 10</p><p class="st">c) 155 và 80</p><div class="frow"><label class="fl">a) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">b) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label><label class="fl">c) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="2" aria-label="Ô trả lời 3"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb2"><span class="score-tag"></span><div class="q-head"><span class="num">2</span><span class="t">Bài 2</span></div><p class="st">Số?</p><p class="st">a) 35% của 100 kg là <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1">.. kg.</p><p class="st">b) 13,8% của 2 m 8 cm là <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2">.. cm.</p><p class="st">c) Tìm 110% của 80 l là <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="2" aria-label="Ô trả lời 3">.. l.</p><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb3"><span class="score-tag"></span><div class="q-head"><span class="num">3</span><span class="t">Bài 3</span></div><p class="st">Số ?</p><p class="st">a) 15% + 76% = ….. %</p><p class="st">b) 177% - 82% = ….. %</p><p class="st">c) 43% x 6 = …... %</p><p class="st">d) 242% : 11 = ….. %</p><div class="frow"><label class="fl">a) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">b) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label><label class="fl">c) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="2" aria-label="Ô trả lời 3"></label><label class="fl">d) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="3" aria-label="Ô trả lời 4"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb4"><span class="score-tag"></span><div class="q-head"><span class="num">4</span><span class="t">Bài 4</span></div><p class="st">Tính và viết đáp án dưới dạng số tự nhiên hoặc số thập phân.</p><p class="st">a) 77% + 2</p><p class="st">b) 166% - 0,75</p><p class="st">c) 128% x 25%</p><p class="st">c) 146% : 50%</p><div class="frow"><label class="fl">1) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">2) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label><label class="fl">3) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="2" aria-label="Ô trả lời 3"></label><label class="fl">4) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="3" aria-label="Ô trả lời 4"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb5"><span class="score-tag"></span><div class="q-head"><span class="num">5</span><span class="t">Bài 5</span></div><p class="st">Lớp 5D có 48 học sinh, trong đó có 18 học sinh nữ. Hỏi tỉ số phần trăm</p><p class="st">của học sinh nữ và học sinh nam của lớp 5D?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb6"><span class="score-tag"></span><div class="q-head"><span class="num">6</span><span class="t">Bài 6</span></div><p class="st">Khôi mua 12 chiếc bút chì và 30 chiếc bút mức. Tìm tỉ số phần trăm của</p><p class="st">số bút chì với số bút mục mà Khôi đã mua.</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb7"><span class="score-tag"></span><div class="q-head"><span class="num">7</span><span class="t">Bài 7</span></div><p class="st">Cửa hàng nhập về 140 bao thóc. Buổi sáng cửa hàng bán được 30% số bao</p><p class="st">gạo. Hỏi cửa hàng còn lại bao nhiêu bao thóc?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb8"><span class="score-tag"></span><div class="q-head"><span class="num">8</span><span class="t">Bài 8</span></div><p class="st">Nam có 24 quyển sổ. Khôi có số vỏ bằng 75% số vở của Nam. Hỏi cả hai</p><p class="st">bạn có bao nhiêu quyển sổ?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb9"><span class="score-tag"></span><div class="q-head"><span class="num">9</span><span class="t">Bài 9</span></div><p class="st">Thảo và Tú có tất cả 42 chiếc nhãn vở. Số nhãn vở của Thảo bằng 75% số</p><p class="st">nhãn vở của Tú. Tìm số nhãn vở của mỗi bạn.</p><div class="frow"><label class="fl">1) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">2) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb10"><span class="score-tag"></span><div class="q-head"><span class="num">10</span><span class="t">Bài 10</span></div><p class="st">Cô Thảo gửi 10 000 000 đồng vào ngân hàng với lãi suất 6% mỗi năm. Hỏi</p><p class="st">sau một năm cô Thảo nhận được bao nhiêu tiền cả vốn lẫn lãi?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb11"><span class="score-tag"></span><div class="q-head"><span class="num">11</span><span class="t">Bài 11</span></div><p class="st">Một cửa hàng bán chiếc xe đạp với giá 1 350 000 đồng. Nhân ngày Quốc</p><p class="st">tế Thiếu nhi, cửa hàng giảm 10% giá niêm yết chiếc xe đạp. Hỏi giá lúc sau của</p><p class="st">chiếc xe đạp là bao nhiêu?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb12"><span class="score-tag"></span><div class="q-head"><span class="num">12</span><span class="t">Bài 12</span></div><p class="st">Một người bán hàng chi ra số tiền vốn là 6 000 000 đồng để nhập hàng</p><p class="st">về bán. Sau khi bán hết thì người đo thu về số tiền là 7 500 000 đồng. Hỏi:</p><p class="st">a) Người bán hàng đó đã được lãi bao nhiêu tiền?</p><p class="st">b) Tiền lãi bằng bao nhiêu phần trăm tiền vốn?</p><div class="frow"><label class="fl">a) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">b) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb13"><span class="score-tag"></span><div class="q-head"><span class="num">13</span><span class="t">Bài 13</span></div><p class="st">Một người bán hàng chi ra số tiền vốn là 9 000 000 đồng để mua hàng.</p><p class="st">Sau khi bán hết hàng thì người đó thu được số tiền là 7 650 000 đồng. Hỏi:</p><p class="st">a) Người bán hàng đó đã bị lỗ bao nhiêu tiền?</p><p class="st">b) Tiền lỗ bằng bao nhiêu phần trăm tiền vốn?</p><div class="frow"><label class="fl">a) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">b) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb14"><span class="score-tag"></span><div class="q-head"><span class="num">14</span><span class="t">Bài 14</span></div><p class="st">Cửa hàng nhập về chiếc áo khoác với giá 240 000 đồng. Hỏi nếu cửa hàng</p><p class="st">muốn lãi 24% so với giá nhập thì sẽ bán chiếc áo khoác với giá bao nhiêu?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb15"><span class="score-tag"></span><div class="q-head"><span class="num">15</span><span class="t">Bài 15</span></div><p class="st">Trường tiểu học B có 80 phòng. Trong đó 60% là phòng học, 30% là</p><p class="st">phòng chức năng và các phòng còn lại là phòng vận hành. Hỏi có bao nhiêu</p><p class="st">phòng vận hành?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb16"><span class="score-tag"></span><div class="q-head"><span class="num">16</span><span class="t">Bài 16</span></div><p class="st">Anh Sơn gửi 20 000 000 đồng vào ngân hàng với lãi suất 5% mỗi năm.</p><p class="st">Hỏi sau hai năm anh Sơn nhận được bao nhiêu tiền tính cả vốn và lãi?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb17"><span class="score-tag"></span><div class="q-head"><span class="num">17</span><span class="t">Bài 17</span></div><p class="st">Hiện tại thư viện có 3 000 quyển sách. Sau mỗi năm số sách của thư viện</p><p class="st">tăng lên 10%. Hỏi hai năm nữa thư viện có bao nhiêu quyển sách?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb18"><span class="score-tag"></span><div class="q-head"><span class="num">18</span><span class="t">Bài 18</span></div><p class="st">Nhân ngày Quốc tế thiếu nhi, cửa hàng giảm giá 20% bộ đồ chơi rô-bốt, tuy nhiên cửa hàng vẫn lãi 8% so với giá nhập về. Hỏi nếu không giảm</p><p class="st">cửa hàng sẽ lãi bao nhiêu phần trăm bộ đồ chơi đó?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb19"><span class="score-tag"></span><div class="q-head"><span class="num">19</span><span class="t">Bài 19</span></div><p class="st">Lớp 5D có 50 học sinh trong đó số học sinh nữ hơn số học sinh nam bằng</p><p class="st">8% số học sinh cả lớp. Hỏi có bao nhiêu học sinh nam, bao nhiêu học sinh nữ?</p><div class="frow"><label class="fl">1) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">2) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb20"><span class="score-tag"></span><div class="q-head"><span class="num">20</span><span class="t">Bài 20</span></div><p class="st">Vào dịp Tết Nguyên Đán, một cửa hàng đồ chơi lãi 20% so với giá bán.</p><p class="st">Hỏi cửa hàng đó lãi bao nhiêu phần trăm so với giá vốn?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q self" id="qb21"><span class="score-tag"></span><div class="q-head"><span class="num">21</span><span class="t">Bài 21</span></div><p class="st">Có 1 người mua 2000 quả trứng với giá 27 000 đồng/1 chục quả. Trong</p><p class="st">khi vận chuyển, người đó đã làm vỡ một số quả trứng. Người đó bán số trứng</p><p class="st">còn lại với giá 3000 đồng 1 quả và lãi 10%. Tính số trứng bị vỡ.</p><p class="note">Câu này em làm vào vở, rồi bấm xem đáp án mẫu để tự đối chiếu. Câu này không tính điểm.</p><button type="button" class="btn small selfbtn">Xem đáp án mẫu</button><div class="fb" aria-live="polite"><div class="vd">📘 Đáp án mẫu</div><div class="sl"><p class="st">Vốn: 2000 : 10 × 27 000 = 5 400 000 đồng. Tiền bán: 5 400 000 × 110% = 5 940 000 đồng. Bán 1980 quả; vỡ 2000 − 1980 = 20 quả.</p></div></div></div><div class="card q" id="qb22"><span class="score-tag"></span><div class="q-head"><span class="num">22</span><span class="t">Bài 22</span></div><p class="st">Thanh nghĩ ra một số, Nam nghĩ ra một số bằng <span class="mt"><span class="fr"><span class="n">5</span><span class="d">4</span></span></span> số của Thanh. Dũng nghĩ</p><p class="st">ra một số bằng 60% số của Nam. Hỏi số của Dũng bằng bao nhiêu phần trăm</p><p class="st">số của Thanh?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb23"><span class="score-tag"></span><div class="q-head"><span class="num">23</span><span class="t">Bài 23</span></div><p class="st">Một khu đất của trường hình chữ nhật có diện tích là 2 020 m². Nếu tăng chiều dài</p><p class="st">lên 50% và giảm chiều rộng đi 20% thì diện tích mới là bao nhiêu?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb24"><span class="score-tag"></span><div class="q-head"><span class="num">24</span><span class="t">Bài 24</span></div><p class="st">Một khu đất của trường hình chữ nhật có diện tích là 400 m². Nếu tăng chiều dài</p><p class="st">lên 20% và giảm chiều rộng đi 40% thì diện tích mới là bao nhiêu?</p><div class="frow"><input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb25"><span class="score-tag"></span><div class="q-head"><span class="num">25</span><span class="t">Bài 25</span></div><p class="st">Giá vé xem phim là 50 nghìn đồng một vé. Sau khi giảm giá vé, số khán</p><p class="st">giả tăng thêm 20% nên doanh thu tăng 8%. Hỏi giá vé sau khi giảm là bao</p><p class="st">nhiêu?</p><div class="frow"><label class="fl">1) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">2) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div>
+<div class="submit-zone"><button class="btn" id="submitBtn" type="button">Nộp bài</button><p id="msg" role="alert"></p></div>
+<div class="card" id="result" tabindex="-1"><div class="em" id="rEm"></div><div class="sc" id="rSc"></div><div class="s10" id="r10"></div><p id="rMsg" class="rmsg"></p><p class="note" id="rSend"></p><button class="btn green" id="retryBtn" type="button">Làm lại từ đầu</button></div>
+</div>
+<script>
+var CFG={"gas": "https://script.google.com/macros/s/AKfycby_OmwTYAGJ5BdCL-u2lTPFqYsBMLqLtmeFUTeQYF52w0Nk-H0KlrvoWjINA5K0js1lIw/exec", "bai": "Ôn tập tỉ số phần trăm", "total": 39};
+var QS=[{"no": "b1", "t": "fill", "u": [{"label": "Bài 1a", "ans": ["70"]}, {"label": "Bài 1b", "ans": ["36"]}, {"label": "Bài 1c", "ans": ["193,75"]}], "ansh": "70; 36; 193,75", "sol": "<p class=\"st\">a) 70%; b) 36%; c) 193,75%.</p>", "multi": false}, {"no": "b2", "t": "fill", "u": [{"label": "Bài 2a", "ans": ["35"]}, {"label": "Bài 2b", "ans": ["28,704"]}, {"label": "Bài 2c", "ans": ["88"]}], "ansh": "35; 28,704; 88", "sol": "<p class=\"st\">a) 35 kg; b) 208 × 13,8 : 100 = 28,704 cm; c) 88 l.</p>", "multi": false}, {"no": "b3", "t": "fill", "u": [{"label": "Bài 3a", "ans": ["111"]}, {"label": "Bài 3b", "ans": ["95"]}, {"label": "Bài 3c", "ans": ["258"]}, {"label": "Bài 3d", "ans": ["22"]}], "ansh": "111; 95; 258; 22", "sol": "<p class=\"st\">a) 111%; b) 95%; c) 258%; d) 22%.</p>", "multi": false}, {"no": "b4", "t": "fill", "u": [{"label": "Bài 4", "ans": ["2,77"]}, {"label": "Bài 4", "ans": ["0,91"]}, {"label": "Bài 4", "ans": ["0,32"]}, {"label": "Bài 4", "ans": ["2,92"]}], "ansh": "2,77; 0,91; 0,32; 2,92", "sol": "<p class=\"st\">a) 2,77; b) 0,91; c) 0,32; d) 2,92.</p>", "multi": false}, {"no": "b5", "t": "fill", "u": [{"label": "Bài 5", "ans": ["60"]}], "ansh": "60", "sol": "<p class=\"st\">Lớp 5D có số học sinh nam là:</p><p class=\"st\">48 – 18 = 30 (học sinh)</p><p class=\"st\">Tỉ số phần trăm của học sinh nữ và học sinh nam lớp 5D là:</p><p class=\"st\">18 : 30 x 100% = 60%</p><p class=\"st\">Đáp án: 60%.</p>", "multi": false}, {"no": "b6", "t": "fill", "u": [{"label": "Bài 6", "ans": ["40"]}], "ansh": "40", "sol": "<p class=\"st\">Tỉ số phần trăm của số bút chì với số bút mực là:</p><p class=\"st\">12 : 30 x 100% = 40%</p><p class=\"st\">Đáp số: 40%</p>", "multi": false}, {"no": "b7", "t": "fill", "u": [{"label": "Bài 7", "ans": ["98"]}], "ansh": "98", "sol": "<p class=\"st\">Còn lại: 140 × (100 − 30) : 100 = 98 bao thóc.</p>", "multi": false}, {"no": "b8", "t": "fill", "u": [{"label": "Bài 8", "ans": ["42"]}], "ansh": "42", "sol": "<p class=\"st\">Khôi có số quyển sổ là:</p><p class=\"st\">24 x 75 : 100 = 18 (quyển sổ)</p><p class=\"st\">Cả hai bạn có số quyển sổ là:</p><p class=\"st\">24 + 18 = 42 (quyển sổ)</p><p class=\"st\">Đáp số: 42 quyển sổ.</p>", "multi": false}, {"no": "b9", "t": "fill", "u": [{"label": "Bài 9", "ans": ["18"]}, {"label": "Bài 9", "ans": ["24"]}], "ansh": "18; 24", "sol": "<p class=\"st\">Ta có: 75% = <span class=\"mt\"><span class=\"fr\"><span class=\"n\">3</span><span class=\"d\">4</span></span></span> nên suy ra số nhãn vở của Thảo bằng <span class=\"mt\"><span class=\"fr\"><span class=\"n\">3</span><span class=\"d\">4</span></span></span> số nhãn vở của Tú.</p><p class=\"st\">Tổng số phần bằng nhau là: 3 + 4 = 7 (phần)</p><p class=\"st\">Thảo có số nhãn vở là: 42 : 7 x 3 = 18 (nhãn vở)</p><p class=\"st\">Tú có số nhãn vở là: 42 – 18 = 24 (nhãn vở)</p><p class=\"st\">Đáp số: Thảo: 18 nhãn vở,</p><p class=\"st\">Tú: 24 nhãn vở.</p>", "multi": false}, {"no": "b10", "t": "fill", "u": [{"label": "Bài 10", "ans": ["10 600 000"]}], "ansh": "10 600 000", "sol": "<p class=\"st\">Sau một năm, cô Thảo lãi được số tiền là:</p><p class=\"st\">10 000 000 x 6% = 600 000 (đồng)</p><p class=\"st\">Sau một năm, cô Thảo nhận được số tiền cả vốn lẫn lãi là:</p><p class=\"st\">10 000 000 + 600 000 = 10 600 000 (đồng)</p><p class=\"st\">Đáp số: 10 600 000 đồng.</p>", "multi": false}, {"no": "b11", "t": "fill", "u": [{"label": "Bài 11", "ans": ["1 215 000"]}], "ansh": "1 215 000", "sol": "<p class=\"st\">Giá sau giảm: 1 350 000 × 90 : 100 = 1 215 000 đồng.</p>", "multi": false}, {"no": "b12", "t": "fill", "u": [{"label": "Bài 12a", "ans": ["1 500 000"]}, {"label": "Bài 12b", "ans": ["25"]}], "ansh": "1 500 000; 25", "sol": "<p class=\"st\">a) Lãi 1 500 000 đồng. b) 1 500 000 : 6 000 000 × 100 = 25%.</p>", "multi": false}, {"no": "b13", "t": "fill", "u": [{"label": "Bài 13a", "ans": ["1 350 000"]}, {"label": "Bài 13b", "ans": ["15"]}], "ansh": "1 350 000; 15", "sol": "<p class=\"st\">a) Lỗ 1 350 000 đồng. b) 1 350 000 : 9 000 000 × 100 = 15%.</p>", "multi": false}, {"no": "b14", "t": "fill", "u": [{"label": "Bài 14", "ans": ["297 600"]}], "ansh": "297 600", "sol": "<p class=\"st\">24% của 240 000 đồng là:</p><p class=\"st\">240 000 x 24% = 57 600 (đồng)</p><p class=\"st\">Cửa hàng bán chiếc áo với giá là:</p><p class=\"st\">240 000 + 57 600 = 297 600 (đồng)</p><p class=\"st\">Đáp số: 297 600 đồng.</p>", "multi": false}, {"no": "b15", "t": "fill", "u": [{"label": "Bài 15", "ans": ["8"]}], "ansh": "8", "sol": "<p class=\"st\">Có số phòng học là: 80 x 60% = 48 (phòng)</p><p class=\"st\">Có số phòng chức năng là: 80 x 30% = 24 (phòng)</p><p class=\"st\">Có số phòng vận hành là: 80 – (48 + 24) = 8 (phòng)</p><p class=\"st\">Đáp số: 8 phòng.</p>", "multi": false}, {"no": "b16", "t": "fill", "u": [{"label": "Bài 16", "ans": ["22 050 000"]}], "ansh": "22 050 000", "sol": "<p class=\"st\">Sau năm đầu tiền, anh Sơn nhận được số tiền lãi là:</p><p class=\"st\">20 000 000 x 5% = 1 000 000 (đồng)</p><p class=\"st\">Sau năm đầu tiên, số tiền anh Sơn nhận được tính cả vốn và lãi là:</p><p class=\"st\">20 000 000 + 1 000 000 = 21 000 000 (đồng)</p><p class=\"st\">Năm thứ hai, anh Sơn nhận được số tiền lãi là:</p><p class=\"st\">21 000 000 x 5% = 1 050 000 (đồng)</p><p class=\"st\">Sau hai năm, anh Sơn nhận được số tiền tính cả vốn và lãi là:</p><p class=\"st\">21 000 000 + 1 050 000 = 22 050 000 (đồng)</p><p class=\"st\">Đáp số: 22 050 000 đồng.</p>", "multi": false}, {"no": "b17", "t": "fill", "u": [{"label": "Bài 17", "ans": ["3630"]}], "ansh": "3630", "sol": "<p class=\"st\">Sau hai năm: 3000 × 110% × 110% = 3630 quyển sách.</p>", "multi": false}, {"no": "b18", "t": "fill", "u": [{"label": "Bài 18", "ans": ["35"]}], "ansh": "35", "sol": "<p class=\"st\">Giá sau khi giảm so với giá lúc đầu là:</p><p class=\"st\">100% - 20% = 80% (giá lúc đầu)</p><p class=\"st\">Giá sau khi giảm so với giá nhập là:</p><p class=\"st\">100% + 8% = 108% (giá nhập về)</p><p class=\"st\">Ta có 80% giá lúc đầu bằng 108% giá nhập về.</p><p class=\"st\">Giá lúc đầu so với giá nhập về là: 108% : 80% = 135%</p><p class=\"st\">Nếu không giảm giá, cửa hàng sẽ lãi số phần trăm là:</p><p class=\"st\">135% - 100% = 35% (giá nhập về)</p><p class=\"st\">Đáp số: 35%.</p>", "multi": false}, {"no": "b19", "t": "fill", "u": [{"label": "Bài 19", "ans": ["23"]}, {"label": "Bài 19", "ans": ["27"]}], "ansh": "23; 27", "sol": "<p class=\"st\">8% số học sinh cả lớp có số bạn là: 50 x 8% = 4 (học sinh)</p><p class=\"st\">Lớp 5D có số học sinh nam là: (50 – 4) : 2 = 23 (học sinh)</p><p class=\"st\">Lớp 5D có số học sinh nữ là: 23 + 4 = 27 (học sinh)</p><p class=\"st\">Đáp số: 23 học sinh nam và 27 học sinh nữ.</p>", "multi": false}, {"no": "b20", "t": "fill", "u": [{"label": "Bài 20", "ans": ["25%"]}], "ansh": "25%", "sol": "<p class=\"st\">Coi giá bán là 100% thì giá vốn so với giá bán là:</p><p class=\"st\">100% - 20% = 80% (giá bán)</p><p class=\"st\">Cửa hàng đó lãi số phần trăm so với giá vốn là:</p><p class=\"st\">20% : 80% = 25% (giá vốn)</p><p class=\"st\">Đáp số: 25% giá vốn.</p>", "multi": false}, {"no": "b21", "t": "self", "u": [], "ansh": "", "sol": "", "multi": false}, {"no": "b22", "t": "fill", "u": [{"label": "Bài 22", "ans": ["75"]}], "ansh": "75", "sol": "<p class=\"st\">Đổi 60% = <span class=\"mt\"><span class=\"fr\"><span class=\"n\">3</span><span class=\"d\">5</span></span></span> .</p><p class=\"st\">Nam nghĩ ra một số bằng <span class=\"mt\"><span class=\"fr\"><span class=\"n\">5</span><span class=\"d\">4</span></span></span> số của Thanh và Dũng nghĩ ra một số bằng <span class=\"mt\"><span class=\"fr\"><span class=\"n\">3</span><span class=\"d\">5</span></span></span> của</p><p class=\"st\">Nam.</p><p class=\"st\">Suy ra tỉ số số của Dũng so với số của Thanh là: <span class=\"mt\"><span class=\"fr\"><span class=\"n\">3</span><span class=\"d\">5</span></span></span> × <span class=\"mt\"><span class=\"fr\"><span class=\"n\">5</span><span class=\"d\">4</span></span></span> = <span class=\"mt\"><span class=\"fr\"><span class=\"n\">3</span><span class=\"d\">4</span></span></span> .</p><p class=\"st\">Có <span class=\"mt\"><span class=\"fr\"><span class=\"n\">3</span><span class=\"d\">4</span></span></span> = 75 % nên suy ra số của Dũng bằng 75% số của Thanh.</p><p class=\"st\">Đáp số: 75%</p>", "multi": false}, {"no": "b23", "t": "fill", "u": [{"label": "Bài 23", "ans": ["2424"]}], "ansh": "2424", "sol": "<p class=\"st\">Chiều dài mới so với chiều dài ban đầu là: 100% + 50% = 150%</p><p class=\"st\">Chiều rộng mới so với chiều rộng ban đầu là: 100% - 20% = 80%</p><p class=\"st\">Diện tích mới so với diện tích ban đầu là: 150% x 80% = 120%.</p><p class=\"st\">Sau khi tăng giảm chiều dài và chiều rộng thì diện tích mới là:</p><p class=\"st\">2 020 x 120% = 2424 (m²)</p><p class=\"st\">Đáp số: 2424 m².</p>", "multi": false}, {"no": "b24", "t": "fill", "u": [{"label": "Bài 24", "ans": ["288"]}], "ansh": "288", "sol": "<p class=\"st\">Chiều dài mới so với chiều dài ban đầu là: 100% + 20% = 120%</p><p class=\"st\">Chiều rộng mới so với chiều rộng ban đầu là: 100% - 40% = 60%</p><p class=\"st\">Diện tích mới so với diện tích ban đầu là: 120% x 60% = 72%.</p><p class=\"st\">Sau khi tăng giảm chiều dài và chiều rộng thì diện tích mới là:</p><p class=\"st\">400 x 72% = 288 (m²)</p><p class=\"st\">Đáp số: 288 m².</p>", "multi": false}, {"no": "b25", "t": "fill", "u": [{"label": "Bài 25", "ans": ["90%"]}, {"label": "Bài 25", "ans": ["45"]}], "ansh": "90%; 45", "sol": "<p class=\"st\">Giá mới bằng 108% : 120% = 90% giá cũ; giá vé: 50 × 90% = 45 nghìn đồng.</p>", "multi": false}];
+(function(){
+"use strict";
+function $(id){return document.getElementById(id);}
+var LOP_LINK=(new URLSearchParams(location.search).get('lop')||'').trim();
+var sound=true,ctx=null,done={},graded=false,pend=0;
+var PRAISE=["Giỏi quá!","Chính xác!","Tuyệt vời!","Em làm rất tốt!","Hay lắm!","Đúng rồi, siêu quá!"];
+var COMF=["Không sao, em xem lại lời giải nhé.","Cố lên, lần sau em sẽ làm đúng!","Gần được rồi, xem đáp án nhé.","Sai một chút thôi, em đọc lời giải nhé."];
+var pi=0,ci=0;
+function audio(){try{if(!ctx){var C=window.AudioContext||window.webkitAudioContext;if(C)ctx=new C();}if(ctx&&ctx.state==="suspended")ctx.resume();}catch(e){}return ctx;}
+function tone(f,t0,d,type,vol){var c=audio();if(!c)return;try{var o=c.createOscillator(),g=c.createGain();o.type=type||"sine";o.frequency.value=f;g.gain.setValueAtTime(0.0001,c.currentTime+t0);g.gain.exponentialRampToValueAtTime(vol||0.2,c.currentTime+t0+0.02);g.gain.exponentialRampToValueAtTime(0.0001,c.currentTime+t0+d);o.connect(g);g.connect(c.destination);o.start(c.currentTime+t0);o.stop(c.currentTime+t0+d+0.05);}catch(e){}}
+function sOk(){if(!sound)return;tone(880,0,0.18,"sine",0.22);tone(1320,0.12,0.28,"sine",0.2);}
+function sBad(){if(!sound)return;tone(196,0,0.28,"triangle",0.16);tone(165,0.14,0.3,"triangle",0.12);}
+$("muteBtn").addEventListener("click",function(){sound=!sound;this.textContent=sound?"🔊":"🔇";this.setAttribute("aria-pressed",sound?"false":"true");if(sound)audio();});
+/* ---- chuẩn hóa so sánh ---- */
+function norm(s){return String(s==null?"":s).replace(/[\s ]+/g,"").replace(/,/g,".").toLowerCase();}
+function num(s){if(/^-?\d+(\.\d+)?$/.test(s))return parseFloat(s);return null;}
+function eqAns(user,alts){
+  var u=norm(user);if(!u)return false;
+  for(var i=0;i<alts.length;i++){
+    var a=norm(alts[i]);
+    if(u===a)return true;
+    var na=num(a),nu=num(u);
+    if(na!==null){
+      if(nu!==null&&nu===na)return true;
+      if(/^\d{1,3}(\.\d{3})+$/.test(u)&&Math.abs(parseFloat(u.replace(/\./g,""))-na)<1e-9&&Number.isInteger(na))return true;
+      var m=u.match(/^(-?[\d.]+)([a-zA-Z%²³°\/]+.*)$/);
+      if(m&&num(m[1])===na)return true;
+    }
+  }
+  return false;
+}
+/* ---- dựng trạng thái ---- */
+var qEl=[];
+QS.forEach(function(q,i){qEl[i]=$("q"+q.no);});
+function SK(q){return q.t==="loi"||q.t==="self";}
+var scored=QS.filter(function(q){return !SK(q);});
+function prog(){var n=Object.keys(done).length;$("barFill").style.width=Math.round(100*n/scored.length)+"%";$("barTxt").textContent=n+"/"+scored.length;}
+function unitTotal(){return scored.reduce(function(s,q){return s+q.u.length;},0);}
+function readAnswer(card,q){
+  var r=[];
+  if(q.t==="fill"){card.querySelectorAll(".fi").forEach(function(e){r.push(e.value);});}
+  return r;
+}
+function gradeQ(i,silent){
+  var q=QS[i],card=qEl[i];if(!card||done[i]!==undefined||SK(q))return;
+  var res=[],earned=0;
+  if(q.t==="fill"){
+    var ins=card.querySelectorAll(".fi,.symrow");
+    q.u.forEach(function(u,k){var inp=ins[k],isS=!!inp&&inp.classList.contains("symrow"),v=!inp?"":(isS?(inp.getAttribute("data-v")||""):inp.value),ok=!!inp&&eqAns(v,u.ans);
+      if(inp&&!isS){inp.classList.add(ok?"right":"wrong");inp.readOnly=true;}
+      if(isS){inp.querySelectorAll("button").forEach(function(b){b.disabled=true;var bk=b.getAttribute("data-k");if(eqAns(bk,u.ans))b.classList.add("right");else if(bk===v)b.classList.add("wrong");});}
+      res.push(ok);});
+  }else{
+    var sel=[];
+    if(q.t==="cmp"){var b=card.querySelector(".cmpb.sel");if(b)sel=[b.getAttribute("data-k")];}
+    else card.querySelectorAll("input:checked").forEach(function(e){sel.push(e.value);});
+    var selS=sel.slice().sort().join(","),ok=q.u[0].ans.some(function(a){return a.split(",").sort().join(",")===selS;});
+    res.push(ok);
+    var cs=q.u[0].ans.join(",").split(",");
+    card.querySelectorAll(".opt,.cmpb").forEach(function(o){var k=o.getAttribute("data-k");var isC=cs.indexOf(k)>=0,isS=sel.indexOf(k)>=0;if(isC)o.classList.add("right");else if(isS)o.classList.add("wrong");var inp=o.querySelector("input");if(inp)inp.disabled=true;});
+    card.querySelectorAll(".cmpb").forEach(function(o){o.disabled=true;});
+  }
+  res.forEach(function(r){if(r)earned++;});
+  done[i]={res:res,earned:earned};
+  var all=earned===res.length;
+  card.classList.add(all?"ok":"bad");card.classList.add("graded");
+  var ch=card.querySelector(".chk");if(ch)ch.disabled=true;
+  var tag=card.querySelector(".score-tag");if(tag){tag.textContent=earned+" / "+res.length+" điểm";tag.className="score-tag "+(all?"full":(earned===0?"zero":"part"));}
+  var fb=card.querySelector(".fb");
+  var vd=all?("Đúng rồi! "+PRAISE[pi++%PRAISE.length]):("Chưa đúng. "+COMF[ci++%COMF.length]);
+  var h='<div class="vd">'+(all?"✅ ":"💡 ")+vd+'</div>';
+  if(!all||q.t==="fill")h+='<div>Đáp án đúng: '+q.ansh+'</div>';
+  if(q.sol)h+='<div class="sl">Lời giải: '+q.sol+'</div>';
+  fb.innerHTML=h;
+  card.classList.add("graded");
+  if(!silent){if(all){sOk();card.classList.add("pop");spark(card);}else sBad();}
+  prog();
+}
+function spark(card){var s=["⭐","✨","🌟"];for(var k=0;k<4;k++){var e=document.createElement("span");e.className="spark";e.textContent=s[k%3];e.style.left=(20+k*20)+"%";e.style.top="8px";card.appendChild(e);(function(x){setTimeout(function(){x.remove();},1100);})(e);}}
+QS.forEach(function(q,i){
+  var card=qEl[i];
+  if(card&&q.t==="self"){var sb=card.querySelector(".selfbtn");if(sb)sb.addEventListener("click",function(){card.classList.add("shown");sb.disabled=true;audio();});return;}
+  if(!card||SK(q))return;
+  card.querySelectorAll(".symrow").forEach(function(row){row.querySelectorAll("button").forEach(function(b){b.addEventListener("click",function(){if(done[i]!==undefined)return;audio();row.querySelectorAll("button").forEach(function(x){x.classList.remove("sel");});b.classList.add("sel");row.setAttribute("data-v",b.getAttribute("data-k"));card.dispatchEvent(new Event("input",{bubbles:true}));});});});
+  if(q.t==="mc"&&!q.multi)card.querySelectorAll(".opt input").forEach(function(inp){inp.addEventListener("change",function(){audio();gradeQ(i);});});
+  if(q.t==="cmp")card.querySelectorAll(".cmpb").forEach(function(b){b.addEventListener("click",function(){audio();b.classList.add("sel");gradeQ(i);});});
+  if(q.t==="mc"&&q.multi||q.t==="fill"){
+    var ch=card.querySelector(".chk");
+    function upd(){if(!ch||done[i]!==undefined)return;var any=false;if(q.t==="fill"){card.querySelectorAll(".fi").forEach(function(e){if(e.value.trim())any=true;});card.querySelectorAll(".symrow").forEach(function(e){if(e.getAttribute("data-v"))any=true;});}else{any=!!card.querySelector("input:checked");}ch.disabled=!any;}
+    card.addEventListener("input",upd);card.addEventListener("change",upd);
+    if(ch)ch.addEventListener("click",function(){audio();gradeQ(i);});
+    card.querySelectorAll(".fi").forEach(function(e){e.addEventListener("keydown",function(ev){if(ev.key==="Enter"){ev.preventDefault();if(ch&&!ch.disabled){audio();gradeQ(i);}}});});
+  }
+});
+prog();
+/* ---- họ tên / lớp ---- */
+var nm=$("studentName"),cl=$("studentClass");
+if(LOP_LINK){cl.value=LOP_LINK;cl.readOnly=true;
+  var tm=setTimeout(function(){},0),got=false;
+  try{
+    var ctl=("AbortController" in window)?new AbortController():null;
+    var to=setTimeout(function(){if(ctl)ctl.abort();},5000);
+    fetch(CFG.gas+"?action=roster&lop="+encodeURIComponent(LOP_LINK),ctl?{signal:ctl.signal}:{}).then(function(r){return r.json();}).then(function(d){clearTimeout(to);
+      if(d&&d.ok&&d.names&&d.names.length){
+        var box=document.createElement("div");box.className="nm-list";box.id="nmList";
+        d.names.forEach(function(n){var b=document.createElement("button");b.type="button";b.textContent=n;b.addEventListener("click",function(){box.querySelectorAll("button").forEach(function(x){x.classList.remove("on");});b.classList.add("on");nm.value=n;nm.type="hidden";});box.appendChild(b);});
+        var o=document.createElement("button");o.type="button";o.textContent="Tên con không có trong danh sách";o.addEventListener("click",function(){box.remove();nm.type="text";nm.value="";nm.focus();});box.appendChild(o);
+        nm.type="hidden";nm.parentNode.appendChild(box);
+      }}).catch(function(){clearTimeout(to);});
+  }catch(e){}
+}
+/* ---- nộp bài ---- */
+var warned=false;
+$("submitBtn").addEventListener("click",function(){
+  if(graded)return;
+  var msg=$("msg");
+  var nmv=nm.value.trim(),clv=cl.value.trim();
+  if(!nmv||!clv){msg.textContent=!nmv&&$("nmList")?"Em hãy chọn tên của mình trong danh sách nhé!":"Em hãy điền họ tên và lớp trước khi nộp bài nhé!";(nmv?cl:(nm.type==="hidden"?$("nmList"):nm)).scrollIntoView({block:"center"});return;}
+  var left=0;QS.forEach(function(q,i){if(!SK(q)&&done[i]===undefined)left++;});
+  if(left>0&&!warned){warned=true;msg.textContent="Em còn "+left+" câu chưa làm. Em kiểm tra lại nhé. Nếu vẫn muốn nộp, hãy bấm “Nộp bài” lần nữa.";return;}
+  msg.textContent="";graded=true;
+  QS.forEach(function(q,i){if(!SK(q))gradeQ(i,true);});
+  var earned=0,total=0,wrong=[];
+  QS.forEach(function(q,i){if(SK(q))return;var d=done[i];q.u.forEach(function(u,k){total++;if(d.res[k])earned++;else if(wrong.indexOf(u.label)<0)wrong.push(u.label);});});
+  $("submitBtn").disabled=true;nm.disabled=true;
+  var loplink=LOP_LINK;
+  try{fetch(CFG.gas,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({bai:CFG.bai,hoten:nmv,lop:clv,loplink:loplink,diem:earned,tongdiem:total,causai:wrong.join(", ")})}).then(function(){$("rSend").textContent="Bài của em đã được gửi cho cô giáo.";}).catch(function(){$("rSend").textContent="Chưa gửi được bài, em kiểm tra mạng rồi báo cô nhé.";});}catch(e){}
+  var pct=total?earned/total:0,em,m;
+  if(pct>=.9){em="🏆";m="Tuyệt vời! Em làm bài rất xuất sắc!";}
+  else if(pct>=.7){em="🌟";m="Rất tốt! Em xem lại các câu đỏ để giỏi hơn nữa nhé.";}
+  else if(pct>=.5){em="👍";m="Khá lắm! Em đọc lời giải các câu sai rồi thử lại nhé.";}
+  else{em="🌱";m="Đừng lo, em xem lại lời giải rồi làm lại, em sẽ tiến bộ!";}
+  if(pct>=.7&&sound){sOk();}
+  $("rEm").textContent=em;$("rSc").textContent=earned+" / "+total+" điểm";
+  $("r10").textContent="Quy ra thang 10: "+(Math.round(pct*100)/10).toString().replace(".",",")+" điểm";
+  $("rMsg").textContent=nmv+" ơi, "+m;
+  $("result").classList.add("show");$("result").scrollIntoView({behavior:"smooth",block:"center"});
+});
+$("retryBtn").addEventListener("click",function(){location.reload();});
+window.__test={QS:QS,done:done,gradeQ:gradeQ,eqAns:eqAns};
+})();
+
+</script>
+</body>
+</html>

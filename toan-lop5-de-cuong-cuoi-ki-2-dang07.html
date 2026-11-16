@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toán 5 – Đề cương cuối học kì II – Dạng 7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:ital,wght@0,500;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>:root{--leaf:#2f8f5b;--leaf-dark:#1f6a42;--leaf-soft:#e3f5ea;--sky:#dff1fb;--sun:#ffb53d;--petal:#f26d85;--ink:#23402f;--paper:#fffdf6;--line:#d6e6d9;--ok:#1f9d63;--ok-bg:#e2f7eb;--bad:#e04f4f;--bad-bg:#fdeaea}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Nunito',system-ui,Arial,sans-serif;color:var(--ink);font-size:17px;line-height:1.6;background:linear-gradient(180deg,#dff1fb 0,#eef8ee 420px,#f4faef 100%)}
+h1,h2,h3{font-family:'Baloo 2','Nunito',system-ui,sans-serif;line-height:1.2;margin:0}
+.wrap{max-width:820px;margin:0 auto;padding:0 14px 80px}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,253,246,.94);backdrop-filter:blur(6px);border-bottom:2px solid var(--line)}
+.tb-in{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:6px 14px}
+.bar{flex:1;height:12px;background:#e4efe6;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6cc17a,#ffb53d);border-radius:99px;transition:width .35s}
+#barTxt{font-weight:800;font-size:14px;color:var(--leaf-dark);min-width:44px;text-align:right}
+#muteBtn{border:2px solid var(--line);background:#fff;border-radius:50%;width:38px;height:38px;font-size:18px;cursor:pointer;line-height:1}
+.hero{position:relative;margin:0 -14px;overflow:hidden}
+.hero svg{display:block;width:100%;height:auto}
+.hero-title{position:absolute;left:0;right:0;top:4%;text-align:center;padding:0 12px}
+.hero-title .wk{display:inline-block;background:#fff;color:var(--leaf-dark);font-weight:800;border-radius:999px;padding:3px 16px;font-size:15px;box-shadow:0 3px 0 rgba(31,106,66,.18)}
+.hero-title h1{font-size:clamp(30px,8.5vw,56px);color:#fff;font-weight:800;text-shadow:0 3px 0 var(--leaf-dark),0 6px 14px rgba(31,106,66,.35);margin-top:4px}
+.card{background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:20px 18px;margin-top:18px;box-shadow:0 6px 0 #cfe3d2}
+.info{display:grid;grid-template-columns:1fr 130px;gap:12px}
+.info label{font-weight:800;font-size:15px;display:block;margin-bottom:4px}
+.info input{width:100%;font:inherit;padding:11px 14px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}
+.info input[readonly]{background:#eef5ee;font-weight:800}
+.nm-list{display:flex;flex-wrap:wrap;gap:8px}
+.nm-list button{font:inherit;font-weight:700;border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer;color:var(--ink)}
+.nm-list button.on{background:var(--leaf);border-color:var(--leaf-dark);color:#fff}
+input:focus,button:focus-visible,.opt:focus-within{outline:3px solid var(--sun);outline-offset:2px}
+.section-h{display:flex;align-items:center;gap:12px;margin:30px 0 0}
+.section-h .ico{flex:none;width:54px;height:54px}
+.section-h h2{font-size:28px;color:var(--leaf-dark)}
+.section-h p{margin:0;font-size:15px;color:#557a63}
+.q{position:relative;transition:background .25s,border-color .25s}
+.q-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--leaf);color:#fff;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:20px;display:grid;place-items:center;box-shadow:0 3px 0 var(--leaf-dark)}
+.q-head .t{font-weight:800;font-size:18px}
+.st{margin:6px 0;font-size:18px;overflow-wrap:anywhere}
+.mt{font-family:'Nunito','Times New Roman',serif;white-space:normal}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 2px;line-height:1.15;font-size:.92em}
+.fr .n{border-bottom:2px solid currentColor;padding:0 3px}
+.fr .d{padding:0 3px}
+.fig{margin:10px 0;text-align:center}
+.fig img,.fig svg{max-width:100%;height:auto;border-radius:12px;border:2px solid var(--line);background:#fff;max-height:340px}
+.fig svg{width:min(100%,460px)}
+.tw{overflow-x:auto;margin:8px 0}
+.dt{border-collapse:collapse;font-size:16px;background:#fff}
+.dt th,.dt td{border:2px solid var(--line);padding:6px 12px;text-align:center}
+.dt th{background:var(--leaf-soft)}
+.opts{margin-top:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--line);border-radius:14px;padding:11px 14px;margin-top:9px;cursor:pointer;background:#fff;min-height:48px}
+.opt input{margin-top:5px;accent-color:var(--leaf);width:20px;height:20px;flex:none}
+.opt:has(input:checked){border-color:var(--leaf);background:var(--leaf-soft)}
+.opt b{flex:none}
+.opt .ot{flex:1;min-width:0}
+.opt .fig{margin:4px 0}.opt .fig svg,.opt .fig img{max-height:130px}
+.cmprow{display:flex;gap:12px;margin-top:10px}
+.cmpb{flex:1;font:inherit;font-weight:800;font-size:30px;border:2px solid var(--line);background:#fff;border-radius:16px;padding:6px 0;cursor:pointer;color:var(--leaf-dark);min-height:56px}
+.cmpb:hover{background:var(--leaf-soft)}
+.fi{font:inherit;font-weight:800;font-size:18px;width:130px;max-width:46vw;padding:4px 10px;border:2px solid var(--leaf);border-radius:12px;background:var(--leaf-soft);color:var(--leaf-dark);text-align:center;vertical-align:middle;margin:2px 3px;min-height:42px}
+.frow{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px}
+.fl{font-weight:800}
+.note{font-size:14.5px;color:#557a63;margin:8px 0 0}.note.warn{color:#b36b00;font-weight:800}
+.btn{font-family:'Baloo 2','Nunito',sans-serif;font-weight:800;font-size:22px;border:0;border-radius:999px;padding:12px 38px;cursor:pointer;background:var(--sun);color:#5a3a00;box-shadow:0 6px 0 #d18a12}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 #d18a12}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.small{font-size:17px;padding:8px 24px;margin-top:12px;background:var(--leaf);color:#fff;box-shadow:0 5px 0 var(--leaf-dark)}
+.btn.green{background:var(--leaf);color:#fff;box-shadow:0 6px 0 var(--leaf-dark);font-size:18px;padding:9px 28px}
+.fb{display:none;margin-top:12px;border-radius:14px;padding:12px 14px;font-size:16.5px}
+.graded .fb{display:block}
+.fb .vd{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:21px}
+.fb .sl{margin-top:6px;color:#3b5a47}
+.q.ok{background:#f2fbf5;border-color:var(--ok)}
+.q.ok .fb{background:var(--ok-bg)}.q.ok .vd{color:var(--ok)}
+.q.bad{background:#fff8f8;border-color:#efb0b0}
+.q.bad .fb{background:var(--bad-bg)}.q.bad .vd{color:var(--bad)}
+.opt.right{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.cmpb.right{border-color:var(--ok);background:var(--ok-bg)}
+.cmpb.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.fi.right{border-color:var(--ok);background:var(--ok-bg)}
+.fi.wrong{border-color:var(--bad);background:var(--bad-bg);text-decoration:line-through}
+.score-tag{display:none;position:absolute;top:-13px;right:14px;font-weight:800;font-size:14px;border-radius:999px;padding:2px 12px;color:#fff}
+.graded .score-tag{display:block}
+.score-tag.full{background:var(--ok)}.score-tag.part{background:#e59a1c}.score-tag.zero{background:var(--bad)}
+.graded .opt,.graded .cmpb{cursor:default}
+.loi{border-style:dashed}
+.submit-zone{text-align:center;margin-top:30px}
+#msg{color:var(--bad);font-weight:800;min-height:26px;margin:10px 0 0}
+#result{display:none;text-align:center;background:linear-gradient(180deg,#fff8e1,#fffdf6);border-color:var(--sun);box-shadow:0 6px 0 #f0cf86}
+#result.show{display:block}
+#result .em{font-size:60px;line-height:1}
+#result .sc{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:46px;color:var(--leaf-dark);line-height:1.1}
+#result .s10{font-weight:800;color:#b36b00}
+.rmsg{font-weight:800;margin:8px 0}
+.pop{animation:pop .5s ease-out}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.025)}100%{transform:scale(1)}}
+.spark{position:absolute;pointer-events:none;font-size:20px;animation:sp 1s ease-out forwards}
+@keyframes sp{from{opacity:1;transform:translateY(0) scale(.6)}to{opacity:0;transform:translateY(-46px) scale(1.2)}}
+@media (max-width:600px){body{font-size:16px}.info{grid-template-columns:1fr}.st{font-size:17px}.fi{width:104px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pop,.spark{animation:none}.bar i{transition:none}}
+
+.symrow{display:inline-flex;gap:6px;vertical-align:middle;margin:2px 4px}
+.symrow button{font:inherit;font-weight:800;font-size:22px;width:44px;height:44px;border:2px solid var(--line);background:#fff;border-radius:12px;cursor:pointer;color:var(--leaf-dark)}
+.symrow button.sel{border-color:var(--leaf);background:var(--leaf-soft)}
+.symrow button.right{border-color:var(--ok);background:var(--ok-bg)}
+.symrow button.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.q.shown .fb{display:block;background:#eef6ff}
+.q.self{border-style:dashed}
+.q.self .fb .vd{color:#2c6aa8}
+.part-h{margin:34px 0 0;font-size:24px;color:var(--leaf-dark)}
+
+.cloud{animation:drift 30s linear infinite alternate}
+.cloud.c2{animation-duration:42s;animation-delay:-8s}
+@keyframes drift{to{transform:translateX(46px)}}
+.fly{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.fly.d1{animation-delay:-1.3s}.fly.d2{animation-delay:-2.6s}
+@keyframes bob{50%{transform:translate(6px,-10px) rotate(3deg)}}
+.twinkle{animation:tw 2.6s ease-in-out infinite}
+@keyframes tw{50%{opacity:.4}}
+.sway{animation:sway 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.spin{animation:spin 24s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.drive{animation:drive 9s linear infinite}
+@keyframes drive{from{transform:translateX(-120px)}to{transform:translateX(880px)}}
+.grow{animation:grow 4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+.grow.d1{animation-delay:-1s}.grow.d2{animation-delay:-2s}.grow.d3{animation-delay:-3s}
+@keyframes grow{50%{transform:scaleY(.82)}}
+.swing{animation:swing 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
+@keyframes swing{50%{transform:rotate(7deg)}}
+.hand{animation:spin 40s linear infinite;transform-box:view-box;transform-origin:0 0}
+@media (prefers-reduced-motion:reduce){.cloud,.fly,.twinkle,.sway,.spin,.drive,.grow,.swing,.hand{animation:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="tb-in"><div class="bar"><i id="barFill"></i></div><span id="barTxt">0/5</span><button type="button" id="muteBtn" aria-label="Bật hoặc tắt âm thanh" aria-pressed="false">🔊</button></div></div>
+<div class="wrap">
+<div class="hero"><svg viewBox="0 0 820 400" role="img" aria-label="Tranh vẽ buổi sáng đẹp trời: biểu đồ cột và biểu đồ hình quạt tròn" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fc0ec"/><stop offset=".62" stop-color="#cfeaf6"/><stop offset="1" stop-color="#ffe4c9"/></linearGradient>
+<radialGradient id="sunG" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3b0"/><stop offset=".55" stop-color="#ffc94d"/><stop offset="1" stop-color="#ffc94d" stop-opacity="0"/></radialGradient></defs>
+<rect width="820" height="400" fill="url(#sky)"/>
+<g class="twinkle"><circle cx="705" cy="105" r="88" fill="url(#sunG)"/></g><circle cx="705" cy="105" r="38" fill="#ffb53d"/>
+<g class="cloud" fill="#fff" opacity=".92"><ellipse cx="120" cy="150" rx="48" ry="16"/><ellipse cx="150" cy="140" rx="32" ry="15"/></g>
+<g class="cloud c2" fill="#fff" opacity=".9"><ellipse cx="520" cy="190" rx="42" ry="13"/><ellipse cx="546" cy="182" rx="26" ry="12"/></g>
+<path d="M0 300 Q170 238 340 292 T650 276 T820 292 V400 H0Z" fill="#a9dba0"/>
+<path d="M0 340 Q230 292 440 332 T820 322 V400 H0Z" fill="#6cc17a"/>
+<g><path d="M90 340 H400 M90 340 V190" stroke="#23402f" stroke-width="4" stroke-linecap="round"/><rect class="grow d0" x="110" y="250" width="50" height="90" rx="6" fill="#4fa3e8" stroke="#23402f" stroke-opacity=".35" stroke-width="3"/><rect class="grow d1" x="180" y="200" width="50" height="140" rx="6" fill="#f26d85" stroke="#23402f" stroke-opacity=".35" stroke-width="3"/><rect class="grow d2" x="250" y="270" width="50" height="70" rx="6" fill="#ffb53d" stroke="#23402f" stroke-opacity=".35" stroke-width="3"/><rect class="grow d3" x="320" y="220" width="50" height="120" rx="6" fill="#8fcb4a" stroke="#23402f" stroke-opacity=".35" stroke-width="3"/></g><g class="fly"><circle cx="560" cy="260" r="64" fill="#fff" stroke="#3a6ea5" stroke-width="4"/><path d="M560 260 V196 A64 64 0 0 1 620 238Z" fill="#f26d85"/><path d="M560 260 L620 238 A64 64 0 0 1 540 322Z" fill="#ffb53d"/><path d="M560 260 L540 322 A64 64 0 0 1 496 238Z" fill="#8fcb4a"/><path d="M560 260 L496 238 A64 64 0 0 1 560 196Z" fill="#4fa3e8"/></g><g transform="translate(740 352) scale(0.7)"><rect x="-6" y="-40" width="12" height="44" fill="#8b5a2b"/><g class="sway"><circle cx="0" cy="-66" r="30" fill="#2f8f5b"/><circle cx="-20" cy="-48" r="22" fill="#48b06f"/><circle cx="20" cy="-48" r="22" fill="#2f8f5b"/></g></g><g transform="translate(60 372)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#f26d85"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(330 376)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#fff"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(520 372)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#b98cf0"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g><g transform="translate(770 376)"><path d="M0 0 v26" stroke="#2f8f5b" stroke-width="4"/><g fill="#f26d85"><circle cy="-8" r="7"/><circle cx="8" r="7"/><circle cy="8" r="7"/><circle cx="-8" r="7"/></g><circle r="5" fill="#ffd66b"/></g></svg><div class="hero-title"><span class="wk">Toán 5 – Đề cương – Dạng 7</span><h1>Ôn tập một số yếu tố thống kê và xác suất.</h1></div></div>
+<div class="card info">
+  <div><label for="studentName">Họ và tên của em</label><input id="studentName" type="text" autocomplete="name" placeholder="Nhập họ và tên của em..."></div>
+  <div><label for="studentClass">Lớp</label><input id="studentClass" type="text" placeholder="VD: 5A"></div>
+</div>
+<div class="section-h"><svg class="ico" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="27" fill="#ffe2a8"/><text x="27" y="35" text-anchor="middle" font-family="Baloo 2,Nunito,Arial" font-weight="800" font-size="22" fill="#1f6a42">▮▮</text></svg><div><h2>Bài tập</h2><p>Câu chọn đáp án hoặc điền số máy chấm ngay. Câu mở em tự đối chiếu đáp án mẫu.</p></div></div>
+<div class="card q self" id="qb42"><span class="score-tag"></span><div class="q-head"><span class="num">42</span><span class="t">Bài 42</span></div><p class="st">Quan sát biểu đồ sau và trả lời câu hỏi.</p><p class="st"><figure class="fig"><img alt="Hình minh họa của câu hỏi" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjUwNHB0IiBoZWlnaHQ9IjI4OHB0IiB2aWV3Qm94PSIwIDAgNTA0IDI4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiPgogPG1ldGFkYXRhPgogIDxyZGY6UkRGIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgPGNjOldvcms+CiAgICA8ZGM6dHlwZSByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIi8+CiAgICA8ZGM6ZGF0ZT4yMDI2LTExLTE1VDIwOjM1OjUzLjExMTQ0MDwvZGM6ZGF0ZT4KICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgPGRjOmNyZWF0b3I+CiAgICAgPGNjOkFnZW50PgogICAgICA8ZGM6dGl0bGU+TWF0cGxvdGxpYiB2My4xMC44LCBodHRwczovL21hdHBsb3RsaWIub3JnLzwvZGM6dGl0bGU+CiAgICAgPC9jYzpBZ2VudD4KICAgIDwvZGM6Y3JlYXRvcj4KICAgPC9jYzpXb3JrPgogIDwvcmRmOlJERj4KIDwvbWV0YWRhdGE+CiA8ZGVmcz4KICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPip7c3Ryb2tlLWxpbmVqb2luOiByb3VuZDsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHR9PC9zdHlsZT4KIDwvZGVmcz4KIDxnIGlkPSJmaWd1cmVfMSI+CiAgPGcgaWQ9InBhdGNoXzEiPgogICA8cGF0aCBkPSJNIDAgMjg4IApMIDUwNCAyODggCkwgNTA0IDAgCkwgMCAwIAp6CiIgc3R5bGU9ImZpbGw6ICNmZmZmZmYiLz4KICA8L2c+CiAgPGcgaWQ9ImF4ZXNfMSI+CiAgIDxnIGlkPSJwYXRjaF8yIj4KICAgIDxwYXRoIGQ9Ik0gNDcuNzIgMjYwLjEyIApMIDQ5My4yIDI2MC4xMiAKTCA0OTMuMiAyNy42NTYyNSAKTCA0Ny43MiAyNy42NTYyNSAKegoiIHN0eWxlPSJmaWxsOiAjZmZmZmZmIi8+CiAgIDwvZz4KICAgPGcgaWQ9InBhdGNoXzMiPgogICAgPHBhdGggZD0iTSA2Ny45NjkwOTEgMjYwLjEyIApMIDExMi45NjcwNzEgMjYwLjEyIApMIDExMi45NjcwNzEgMTIwLjY0MTc1IApMIDY3Ljk2OTA5MSAxMjAuNjQxNzUgCnoKIiBjbGlwLXBhdGg9InVybCgjcDBjZDdhZjgxYzMpIiBzdHlsZT0iZmlsbDogIzQ2OWViMCIvPgogICA8L2c+CiAgIDxnIGlkPSJwYXRjaF80Ij4KICAgIDxwYXRoIGQ9Ik0gMTU3Ljk2NTA1MSAyNjAuMTIgCkwgMjAyLjk2MzAzIDI2MC4xMiAKTCAyMDIuOTYzMDMgNzQuMTQ5IApMIDE1Ny45NjUwNTEgNzQuMTQ5IAp6CiIgY2xpcC1wYXRoPSJ1cmwoI3AwY2Q3YWY4MWMzKSIgc3R5bGU9ImZpbGw6ICM0NjllYjAiLz4KICAgPC9nPgogICA8ZyBpZD0icGF0Y2hfNSI+CiAgICA8cGF0aCBkPSJNIDI0Ny45NjEwMSAyNjAuMTIgCkwgMjkyLjk1ODk5IDI2MC4xMiAKTCAyOTIuOTU4OTkgOTcuMzk1Mzc1IApMIDI0Ny45NjEwMSA5Ny4zOTUzNzUgCnoKIiBjbGlwLXBhdGg9InVybCgjcDBjZDdhZjgxYzMpIiBzdHlsZT0iZmlsbDogIzQ2OWViMCIvPgogICA8L2c+CiAgIDxnIGlkPSJwYXRjaF82Ij4KICAgIDxwYXRoIGQ9Ik0gMzM3Ljk1Njk3IDI2MC4xMiAKTCAzODIuOTU0OTQ5IDI2MC4xMiAKTCAzODIuOTU0OTQ5IDUwLjkwMjYyNSAKTCAzMzcuOTU2OTcgNTAuOTAyNjI1IAp6CiIgY2xpcC1wYXRoPSJ1cmwoI3AwY2Q3YWY4MWMzKSIgc3R5bGU9ImZpbGw6ICM0NjllYjAiLz4KICAgPC9nPgogICA8ZyBpZD0icGF0Y2hfNyI+CiAgICA8cGF0aCBkPSJNIDQyNy45NTI5MjkgMjYwLjEyIApMIDQ3Mi45NTA5MDkgMjYwLjEyIApMIDQ3Mi45NTA5MDkgMTY3LjEzNDUgCkwgNDI3Ljk1MjkyOSAxNjcuMTM0NSAKegoiIGNsaXAtcGF0aD0idXJsKCNwMGNkN2FmODFjMykiIHN0eWxlPSJmaWxsOiAjNDY5ZWIwIi8+CiAgIDwvZz4KICAgPGcgaWQ9Im1hdHBsb3RsaWIuYXhpc18xIj4KICAgIDxnIGlkPSJ4dGlja18xIj4KICAgICA8ZyBpZD0ibGluZTJkXzEiPgogICAgICA8ZGVmcz4KICAgICAgIDxwYXRoIGlkPSJtMDMxNzlhYTRiMSIgZD0iTSAwIDAgCkwgMCAzLjUgCiIgc3R5bGU9InN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4KICAgICAgPC9kZWZzPgogICAgICA8Zz4KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI20wMzE3OWFhNGIxIiB4PSI5MC40NjgwODEiIHk9IjI2MC4xMiIgc3R5bGU9InN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4KICAgICAgPC9nPgogICAgIDwvZz4KICAgICA8ZyBpZD0idGV4dF8xIj4KICAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2Fucyc7IHRleHQtYW5jaG9yOiBtaWRkbGUiIHg9IjkwLjQ2ODA4MSIgeT0iMjc0LjcxODQzNyIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgOTAuNDY4MDgxIDI3NC43MTg0MzcpIj5UaOG7qSBIYWk8L3RleHQ+CiAgICAgPC9nPgogICAgPC9nPgogICAgPGcgaWQ9Inh0aWNrXzIiPgogICAgIDxnIGlkPSJsaW5lMmRfMiI+CiAgICAgIDxnPgogICAgICAgPHVzZSB4bGluazpocmVmPSIjbTAzMTc5YWE0YjEiIHg9IjE4MC40NjQwNCIgeT0iMjYwLjEyIiBzdHlsZT0ic3Ryb2tlOiAjMDAwMDAwOyBzdHJva2Utd2lkdGg6IDAuOCIvPgogICAgICA8L2c+CiAgICAgPC9nPgogICAgIDxnIGlkPSJ0ZXh0XzIiPgogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJzsgdGV4dC1hbmNob3I6IG1pZGRsZSIgeD0iMTgwLjQ2NDA0IiB5PSIyNzQuNzE4NDM3IiB0cmFuc2Zvcm09InJvdGF0ZSgtMCAxODAuNDY0MDQgMjc0LjcxODQzNykiPlRo4bupIEJhPC90ZXh0PgogICAgIDwvZz4KICAgIDwvZz4KICAgIDxnIGlkPSJ4dGlja18zIj4KICAgICA8ZyBpZD0ibGluZTJkXzMiPgogICAgICA8Zz4KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI20wMzE3OWFhNGIxIiB4PSIyNzAuNDYiIHk9IjI2MC4xMiIgc3R5bGU9InN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4KICAgICAgPC9nPgogICAgIDwvZz4KICAgICA8ZyBpZD0idGV4dF8zIj4KICAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2Fucyc7IHRleHQtYW5jaG9yOiBtaWRkbGUiIHg9IjI3MC40NiIgeT0iMjc0LjcxODQzNyIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgMjcwLjQ2IDI3NC43MTg0MzcpIj5UaOG7qSBUxrA8L3RleHQ+CiAgICAgPC9nPgogICAgPC9nPgogICAgPGcgaWQ9Inh0aWNrXzQiPgogICAgIDxnIGlkPSJsaW5lMmRfNCI+CiAgICAgIDxnPgogICAgICAgPHVzZSB4bGluazpocmVmPSIjbTAzMTc5YWE0YjEiIHg9IjM2MC40NTU5NiIgeT0iMjYwLjEyIiBzdHlsZT0ic3Ryb2tlOiAjMDAwMDAwOyBzdHJva2Utd2lkdGg6IDAuOCIvPgogICAgICA8L2c+CiAgICAgPC9nPgogICAgIDxnIGlkPSJ0ZXh0XzQiPgogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJzsgdGV4dC1hbmNob3I6IG1pZGRsZSIgeD0iMzYwLjQ1NTk2IiB5PSIyNzQuNzE4NDM3IiB0cmFuc2Zvcm09InJvdGF0ZSgtMCAzNjAuNDU1OTYgMjc0LjcxODQzNykiPlRo4bupIE7Eg208L3RleHQ+CiAgICAgPC9nPgogICAgPC9nPgogICAgPGcgaWQ9Inh0aWNrXzUiPgogICAgIDxnIGlkPSJsaW5lMmRfNSI+CiAgICAgIDxnPgogICAgICAgPHVzZSB4bGluazpocmVmPSIjbTAzMTc5YWE0YjEiIHg9IjQ1MC40NTE5MTkiIHk9IjI2MC4xMiIgc3R5bGU9InN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4KICAgICAgPC9nPgogICAgIDwvZz4KICAgICA8ZyBpZD0idGV4dF81Ij4KICAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2Fucyc7IHRleHQtYW5jaG9yOiBtaWRkbGUiIHg9IjQ1MC40NTE5MTkiIHk9IjI3NC43MTg0MzciIHRyYW5zZm9ybT0icm90YXRlKC0wIDQ1MC40NTE5MTkgMjc0LjcxODQzNykiPlRo4bupIFPDoXU8L3RleHQ+CiAgICAgPC9nPgogICAgPC9nPgogICA8L2c+CiAgIDxnIGlkPSJtYXRwbG90bGliLmF4aXNfMiI+CiAgICA8ZyBpZD0ieXRpY2tfMSI+CiAgICAgPGcgaWQ9ImxpbmUyZF82Ij4KICAgICAgPHBhdGggZD0iTSA0Ny43MiAyNjAuMTIgCkwgNDkzLjIgMjYwLjEyIAoiIGNsaXAtcGF0aD0idXJsKCNwMGNkN2FmODFjMykiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICNiMGIwYjA7IHN0cm9rZS1vcGFjaXR5OiAwLjI7IHN0cm9rZS13aWR0aDogMC44OyBzdHJva2UtbGluZWNhcDogc3F1YXJlIi8+CiAgICAgPC9nPgogICAgIDxnIGlkPSJsaW5lMmRfNyI+CiAgICAgIDxkZWZzPgogICAgICAgPHBhdGggaWQ9Im00NmQ2OTkwNjgxIiBkPSJNIDAgMCAKTCAtMy41IDAgCiIgc3R5bGU9InN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4KICAgICAgPC9kZWZzPgogICAgICA8Zz4KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI200NmQ2OTkwNjgxIiB4PSI0Ny43MiIgeT0iMjYwLjEyIiBzdHlsZT0ic3Ryb2tlOiAjMDAwMDAwOyBzdHJva2Utd2lkdGg6IDAuOCIvPgogICAgICA8L2c+CiAgICAgPC9nPgogICAgIDxnIGlkPSJ0ZXh0XzYiPgogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJzsgdGV4dC1hbmNob3I6IGVuZCIgeD0iNDAuNzIiIHk9IjI2My45MTkyMTkiIHRyYW5zZm9ybT0icm90YXRlKC0wIDQwLjcyIDI2My45MTkyMTkpIj4wLjA8L3RleHQ+CiAgICAgPC9nPgogICAgPC9nPgogICAgPGcgaWQ9Inl0aWNrXzIiPgogICAgIDxnIGlkPSJsaW5lMmRfOCI+CiAgICAgIDxwYXRoIGQ9Ik0gNDcuNzIgMjEzLjYyNzI1IApMIDQ5My4yIDIxMy42MjcyNSAKIiBjbGlwLXBhdGg9InVybCgjcDBjZDdhZjgxYzMpIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjYjBiMGIwOyBzdHJva2Utb3BhY2l0eTogMC4yOyBzdHJva2Utd2lkdGg6IDAuODsgc3Ryb2tlLWxpbmVjYXA6IHNxdWFyZSIvPgogICAgIDwvZz4KICAgICA8ZyBpZD0ibGluZTJkXzkiPgogICAgICA8Zz4KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI200NmQ2OTkwNjgxIiB4PSI0Ny43MiIgeT0iMjEzLjYyNzI1IiBzdHlsZT0ic3Ryb2tlOiAjMDAwMDAwOyBzdHJva2Utd2lkdGg6IDAuOCIvPgogICAgICA8L2c+CiAgICAgPC9nPgogICAgIDxnIGlkPSJ0ZXh0XzciPgogICAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJzsgdGV4dC1hbmNob3I6IGVuZCIgeD0iNDAuNzIiIHk9IjIxNy40MjY0NjkiIHRyYW5zZm9ybT0icm90YXRlKC0wIDQwLjcyIDIxNy40MjY0NjkpIj4wLjU8L3RleHQ+CiAgICAgPC9nPgogICAgPC9nPgogICAgPGcgaWQ9Inl0aWNrXzMiPgogICAgIDxnIGlkPSJsaW5lMmRfMTAiPgogICAgICA8cGF0aCBkPSJNIDQ3LjcyIDE2Ny4xMzQ1IApMIDQ5My4yIDE2Ny4xMzQ1IAoiIGNsaXAtcGF0aD0idXJsKCNwMGNkN2FmODFjMykiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICNiMGIwYjA7IHN0cm9rZS1vcGFjaXR5OiAwLjI7IHN0cm9rZS13aWR0aDogMC44OyBzdHJva2UtbGluZWNhcDogc3F1YXJlIi8+CiAgICAgPC9nPgogICAgIDxnIGlkPSJsaW5lMmRfMTEiPgogICAgICA8Zz4KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI200NmQ2OTkwNjgxIiB4PSI0Ny43MiIgeT0iMTY3LjEzNDUiIHN0eWxlPSJzdHJva2U6ICMwMDAwMDA7IHN0cm9rZS13aWR0aDogMC44Ii8+CiAgICAgIDwvZz4KICAgICA8L2c+CiAgICAgPGcgaWQ9InRleHRfOCI+CiAgICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnOyB0ZXh0LWFuY2hvcjogZW5kIiB4PSI0MC43MiIgeT0iMTcwLjkzMzcxOSIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgNDAuNzIgMTcwLjkzMzcxOSkiPjEuMDwvdGV4dD4KICAgICA8L2c+CiAgICA8L2c+CiAgICA8ZyBpZD0ieXRpY2tfNCI+CiAgICAgPGcgaWQ9ImxpbmUyZF8xMiI+CiAgICAgIDxwYXRoIGQ9Ik0gNDcuNzIgMTIwLjY0MTc1IApMIDQ5My4yIDEyMC42NDE3NSAKIiBjbGlwLXBhdGg9InVybCgjcDBjZDdhZjgxYzMpIiBzdHlsZT0iZmlsbDogbm9uZTsgc3Ryb2tlOiAjYjBiMGIwOyBzdHJva2Utb3BhY2l0eTogMC4yOyBzdHJva2Utd2lkdGg6IDAuODsgc3Ryb2tlLWxpbmVjYXA6IHNxdWFyZSIvPgogICAgIDwvZz4KICAgICA8ZyBpZD0ibGluZTJkXzEzIj4KICAgICAgPGc+CiAgICAgICA8dXNlIHhsaW5rOmhyZWY9IiNtNDZkNjk5MDY4MSIgeD0iNDcuNzIiIHk9IjEyMC42NDE3NSIgc3R5bGU9InN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4KICAgICAgPC9nPgogICAgIDwvZz4KICAgICA8ZyBpZD0idGV4dF85Ij4KICAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2Fucyc7IHRleHQtYW5jaG9yOiBlbmQiIHg9IjQwLjcyIiB5PSIxMjQuNDQwOTY5IiB0cmFuc2Zvcm09InJvdGF0ZSgtMCA0MC43MiAxMjQuNDQwOTY5KSI+MS41PC90ZXh0PgogICAgIDwvZz4KICAgIDwvZz4KICAgIDxnIGlkPSJ5dGlja181Ij4KICAgICA8ZyBpZD0ibGluZTJkXzE0Ij4KICAgICAgPHBhdGggZD0iTSA0Ny43MiA3NC4xNDkgCkwgNDkzLjIgNzQuMTQ5IAoiIGNsaXAtcGF0aD0idXJsKCNwMGNkN2FmODFjMykiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICNiMGIwYjA7IHN0cm9rZS1vcGFjaXR5OiAwLjI7IHN0cm9rZS13aWR0aDogMC44OyBzdHJva2UtbGluZWNhcDogc3F1YXJlIi8+CiAgICAgPC9nPgogICAgIDxnIGlkPSJsaW5lMmRfMTUiPgogICAgICA8Zz4KICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI200NmQ2OTkwNjgxIiB4PSI0Ny43MiIgeT0iNzQuMTQ5IiBzdHlsZT0ic3Ryb2tlOiAjMDAwMDAwOyBzdHJva2Utd2lkdGg6IDAuOCIvPgogICAgICA8L2c+CiAgICAgPC9nPgogICAgIDxnIGlkPSJ0ZXh0XzEwIj4KICAgICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2Fucyc7IHRleHQtYW5jaG9yOiBlbmQiIHg9IjQwLjcyIiB5PSI3Ny45NDgyMTkiIHRyYW5zZm9ybT0icm90YXRlKC0wIDQwLjcyIDc3Ljk0ODIxOSkiPjIuMDwvdGV4dD4KICAgICA8L2c+CiAgICA8L2c+CiAgICA8ZyBpZD0ieXRpY2tfNiI+CiAgICAgPGcgaWQ9ImxpbmUyZF8xNiI+CiAgICAgIDxwYXRoIGQ9Ik0gNDcuNzIgMjcuNjU2MjUgCkwgNDkzLjIgMjcuNjU2MjUgCiIgY2xpcC1wYXRoPSJ1cmwoI3AwY2Q3YWY4MWMzKSIgc3R5bGU9ImZpbGw6IG5vbmU7IHN0cm9rZTogI2IwYjBiMDsgc3Ryb2tlLW9wYWNpdHk6IDAuMjsgc3Ryb2tlLXdpZHRoOiAwLjg7IHN0cm9rZS1saW5lY2FwOiBzcXVhcmUiLz4KICAgICA8L2c+CiAgICAgPGcgaWQ9ImxpbmUyZF8xNyI+CiAgICAgIDxnPgogICAgICAgPHVzZSB4bGluazpocmVmPSIjbTQ2ZDY5OTA2ODEiIHg9IjQ3LjcyIiB5PSIyNy42NTYyNSIgc3R5bGU9InN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjgiLz4KICAgICAgPC9nPgogICAgIDwvZz4KICAgICA8ZyBpZD0idGV4dF8xMSI+CiAgICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnOyB0ZXh0LWFuY2hvcjogZW5kIiB4PSI0MC43MiIgeT0iMzEuNDU1NDY5IiB0cmFuc2Zvcm09InJvdGF0ZSgtMCA0MC43MiAzMS40NTU0NjkpIj4yLjU8L3RleHQ+CiAgICAgPC9nPgogICAgPC9nPgogICAgPGcgaWQ9InRleHRfMTIiPgogICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnOyB0ZXh0LWFuY2hvcjogbWlkZGxlIiB4PSIxOC43MzcxODgiIHk9IjE0My44ODgxMjUiIHRyYW5zZm9ybT0icm90YXRlKC05MCAxOC43MzcxODggMTQzLjg4ODEyNSkiPkdp4budPC90ZXh0PgogICAgPC9nPgogICA8L2c+CiAgIDxnIGlkPSJwYXRjaF84Ij4KICAgIDxwYXRoIGQ9Ik0gNDcuNzIgMjYwLjEyIApMIDQ3LjcyIDI3LjY1NjI1IAoiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICMwMDAwMDA7IHN0cm9rZS13aWR0aDogMC44OyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbGluZWNhcDogc3F1YXJlIi8+CiAgIDwvZz4KICAgPGcgaWQ9InBhdGNoXzkiPgogICAgPHBhdGggZD0iTSA0OTMuMiAyNjAuMTIgCkwgNDkzLjIgMjcuNjU2MjUgCiIgc3R5bGU9ImZpbGw6IG5vbmU7IHN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjg7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1saW5lY2FwOiBzcXVhcmUiLz4KICAgPC9nPgogICA8ZyBpZD0icGF0Y2hfMTAiPgogICAgPHBhdGggZD0iTSA0Ny43MiAyNjAuMTIgCkwgNDkzLjIgMjYwLjEyIAoiIHN0eWxlPSJmaWxsOiBub25lOyBzdHJva2U6ICMwMDAwMDA7IHN0cm9rZS13aWR0aDogMC44OyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbGluZWNhcDogc3F1YXJlIi8+CiAgIDwvZz4KICAgPGcgaWQ9InBhdGNoXzExIj4KICAgIDxwYXRoIGQ9Ik0gNDcuNzIgMjcuNjU2MjUgCkwgNDkzLjIgMjcuNjU2MjUgCiIgc3R5bGU9ImZpbGw6IG5vbmU7IHN0cm9rZTogIzAwMDAwMDsgc3Ryb2tlLXdpZHRoOiAwLjg7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1saW5lY2FwOiBzcXVhcmUiLz4KICAgPC9nPgogICA8ZyBpZD0idGV4dF8xMyI+CiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMnB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJzsgdGV4dC1hbmNob3I6IG1pZGRsZSIgeD0iMjcwLjQ2IiB5PSIyMS42NTYyNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgMjcwLjQ2IDIxLjY1NjI1KSI+VGjhu51pIGdpYW4gbMOgbSBiw6BpIHThuq1wIHbhu4EgbmjDoCBj4bunYSBIw6A8L3RleHQ+CiAgIDwvZz4KICA8L2c+CiA8L2c+CiA8ZGVmcz4KICA8Y2xpcFBhdGggaWQ9InAwY2Q3YWY4MWMzIj4KICAgPHJlY3QgeD0iNDcuNzIiIHk9IjI3LjY1NjI1IiB3aWR0aD0iNDQ1LjQ4IiBoZWlnaHQ9IjIzMi40NjM3NSIvPgogIDwvY2xpcFBhdGg+CiA8L2RlZnM+Cjwvc3ZnPgo="></figure></p><p class="st">a) Vào thứ Tư, Hà dành bao nhiêu thời gian để làm bài tập về nhà?</p><p class="st">b) Ngày nào Hà dành thời gian làm bài tập về nhà nhiều nhất?</p><p class="st">c) Trung bình mỗi ngày, Hà dành bao nhiêu thời gian để làm bài tập về nhà?</p><p class="st">d) Theo thời gian biểu, Hà phải dành ít nhất 7% thời gian trong một ngày để làm bài tập về nhà. Một ngày có 24 giờ. Có bao nhiêu ngày Hà thực hiện được thời gian biểu trên?</p><p class="note">Câu này em làm vào vở, rồi bấm xem đáp án mẫu để tự đối chiếu. Câu này không tính điểm.</p><button type="button" class="btn small selfbtn">Xem đáp án mẫu</button><div class="fb" aria-live="polite"><div class="vd">📘 Đáp án mẫu</div><div class="sl"><p class="st">a) 1,75 giờ; b) Thứ Năm; c) (1,5 + 2 + 1,75 + 2,25 + 1) : 5 = 1,7 giờ; d) 7% × 24 = 1,68 giờ, có 3 ngày: thứ Ba, thứ Tư, thứ Năm.</p></div></div></div><div class="card q self" id="qb43"><span class="score-tag"></span><div class="q-head"><span class="num">43</span><span class="t">Bài 43</span></div><p class="st">Dưới đây là kết quả điều tra sở thích ăn hoa quả của học sinh lớp 5D. Điền số liệu vào bảng rồi trả lời câu hỏi. Mỗi nhóm “ⅠⅠⅠⅠ╱” biểu diễn 5 lượt kiểm đếm.</p><div class="tw"><table class="dt"><tr><th>Loại quả</th><th>Kiểm đếm</th><th>Số học sinh</th></tr><tr><td>Mít</td><td>ⅠⅠⅠⅠ╱</td><td>5</td></tr><tr><td>Táo</td><td>ⅠⅠⅠⅠ╱ ⅠⅠⅠ</td><td>…</td></tr><tr><td>Chuối</td><td>ⅠⅠⅠⅠ</td><td>…</td></tr><tr><td>Cam</td><td>ⅠⅠⅠⅠ╱ ⅠⅠⅠⅠ╱ ⅠⅠⅠⅠ╱ Ⅰ</td><td>…</td></tr><tr><td>Ổi</td><td>ⅠⅠⅠⅠ╱ ⅠⅠ</td><td>…</td></tr></table></div><p class="st">a) Loại quả nào được thích nhất?</p><p class="st">b) Có bao nhiêu học sinh thích táo?</p><p class="st">c) Số học sinh thích ổi nhiều hơn hay ít hơn số học sinh thích chuối?</p><p class="st">d) Lớp 5D có bao nhiêu học sinh?</p><p class="note">Câu này em làm vào vở, rồi bấm xem đáp án mẫu để tự đối chiếu. Câu này không tính điểm.</p><button type="button" class="btn small selfbtn">Xem đáp án mẫu</button><div class="fb" aria-live="polite"><div class="vd">📘 Đáp án mẫu</div><div class="sl"><p class="st">Điền: 8; 4; 16; 7.</p><p class="st">a) Cam; b) 8 học sinh; c) Nhiều hơn 3 học sinh; d) 40 học sinh.</p></div></div></div><div class="card q self" id="qb44"><span class="score-tag"></span><div class="q-head"><span class="num">44</span><span class="t">Bài 44</span></div><p class="st">Khôi gieo một con xúc xắc 40 lần và ghi lại số chấm xuất hiện ở mỗi lần</p><p class="st">gieo được kết quả như sau:</p><div class="tw"><table class="dt"><tr><th>Mặt</th><th>1 chấm</th><th>2 chấm</th><th>3 chấm</th><th>4 chấm</th><th>5 chấm</th><th>6 chấm</th></tr><tr><td>Số lần</td><td>4</td><td>10</td><td>5</td><td>6</td><td>12</td><td>3</td></tr></table></div><p class="st">a) Tỉ số của số lần xảy ra sự kiện mặt chẵn chấm xuất hiện so với tổng số lần gieo</p><p class="st">là bao nhiêu?</p><p class="st">b) Tỉ số của số lần xảy ra sự kiện mặt lẻ chấm xuất hiện và số lần xảy ra sự kiện</p><p class="st">mặt chẵn chấm xuất hiện là bao nhiêu?</p><p class="note">Câu này em làm vào vở, rồi bấm xem đáp án mẫu để tự đối chiếu. Câu này không tính điểm.</p><button type="button" class="btn small selfbtn">Xem đáp án mẫu</button><div class="fb" aria-live="polite"><div class="vd">📘 Đáp án mẫu</div><div class="sl"><p class="st">a) <span class="mt"><span class="fr"><span class="n">19</span><span class="d">40</span></span></span></p><p class="st">b) <span class="mt"><span class="fr"><span class="n">21</span><span class="d">19</span></span></span></p></div></div></div><div class="card q self" id="qb45"><span class="score-tag"></span><div class="q-head"><span class="num">45</span><span class="t">Bài 45</span></div><p class="st">Các bạn lớp 5E dùng vòng quay để chọn màu áo đồng phục lớp: màu vàng,</p><p class="st">màu trắng, màu xanh dương, màu đỏ. Mũi tên chỉ vào phần tô màu nào thì chọn</p><p class="st">áo màu đó. Màu nào có lượt quay vào nhiều nhất thì lớp sẽ thống nhất chọn màu</p><p class="st">đó là màu áo đồng phục lớp.</p><p class="st">Bảng dưới đây cho biết kết quả quay của các bạn lớp 5E.</p><div class="tw"><table class="dt"><tr><th>Khả năng</th><th>Màu vàng</th><th>Màu trắng</th><th>Màu đỏ</th><th>Màu xanh dương</th></tr><tr><td>Số lần lặp lại</td><td>8</td><td>11</td><td>6</td><td>13</td></tr></table></div><p class="st">a) Các bạn lớp 5E đã quay tất cả bao nhiêu lần?</p><p class="st">b) Viết tỉ số của số lần quay được màu vàng so với màu trắng?</p><p class="st">c) Viết tỉ số mô tả số lần lặp lại của mỗi màu so với tổng số lần quay.</p><p class="note">Câu này em làm vào vở, rồi bấm xem đáp án mẫu để tự đối chiếu. Câu này không tính điểm.</p><button type="button" class="btn small selfbtn">Xem đáp án mẫu</button><div class="fb" aria-live="polite"><div class="vd">📘 Đáp án mẫu</div><div class="sl"><p class="st">a) Các bạn lớp 5E đã quay tất cả số lần là: 8 + 11 + 6 + 13 = 38 lần.</p><p class="st">b) Tỉ số của số lần quay được màu vàng so với màu trắng là: <span class="mt"><span class="fr"><span class="n">8</span><span class="d">11</span></span></span></p><p class="st">c) Tỉ số mô tả số lần lặp lại của màu vàng là: <span class="mt"><span class="fr"><span class="n">4</span><span class="d">19</span></span></span></p><p class="st">Tỉ số mô tả số lần lặp lại của màu trắng là: <span class="mt"><span class="fr"><span class="n">11</span><span class="d">38</span></span></span></p><p class="st">Tỉ số mô tả số lần lặp lại của màu đỏ là: <span class="mt"><span class="fr"><span class="n">3</span><span class="d">19</span></span></span></p><p class="st">Tỉ số mô tả số lần lặp lại của màu xanh dương là: <span class="mt"><span class="fr"><span class="n">13</span><span class="d">38</span></span></span> .</p></div></div></div><div class="card q" id="qb46"><span class="score-tag"></span><div class="q-head"><span class="num">46</span><span class="t">Bài 46</span></div><p class="st">Kết quả khảo sát về hoạt động dã ngoại yêu thích của 200 học sinh được cho trong biểu đồ hình quạt tròn bên.</p><p class="st"><figure class="fig"><img alt="Hình minh họa của câu hỏi" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjQ2OHB0IiBoZWlnaHQ9IjMwOS42cHQiIHZpZXdCb3g9IjAgMCA0NjggMzA5LjYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj4KIDxtZXRhZGF0YT4KICA8cmRmOlJERiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgIDxjYzpXb3JrPgogICAgPGRjOnR5cGUgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIvPgogICAgPGRjOmRhdGU+MjAyNi0xMS0xNVQyMDozNToxMS43NDM3NDc8L2RjOmRhdGU+CiAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgIDxkYzpjcmVhdG9yPgogICAgIDxjYzpBZ2VudD4KICAgICAgPGRjOnRpdGxlPk1hdHBsb3RsaWIgdjMuMTAuOCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy88L2RjOnRpdGxlPgogICAgIDwvY2M6QWdlbnQ+CiAgICA8L2RjOmNyZWF0b3I+CiAgIDwvY2M6V29yaz4KICA8L3JkZjpSREY+CiA8L21ldGFkYXRhPgogPGRlZnM+CiAgPHN0eWxlIHR5cGU9InRleHQvY3NzIj4qe3N0cm9rZS1saW5lam9pbjogcm91bmQ7IHN0cm9rZS1saW5lY2FwOiBidXR0fTwvc3R5bGU+CiA8L2RlZnM+CiA8ZyBpZD0iZmlndXJlXzEiPgogIDxnIGlkPSJwYXRjaF8xIj4KICAgPHBhdGggZD0iTSAwIDMwOS42IApMIDQ2OCAzMDkuNiAKTCA0NjggMCAKTCAwIDAgCnoKIiBzdHlsZT0iZmlsbDogI2ZmZmZmZiIvPgogIDwvZz4KICA8ZyBpZD0iYXhlc18xIj4KICAgPGcgaWQ9InBhdGNoXzIiPgogICAgPHBhdGggZD0iTSAzMzguMjM2MDc3IDEwNS43NTAyMzMgCkMgMzI4LjkyOTI2MyA4NS45NzIyNDcgMzE0LjE4MjgzIDY5LjI0NTY5MyAyOTUuNzI3MjU0IDU3LjUzMzQzIApDIDI3Ny4yNzE2NzkgNDUuODIxMTY2IDI1NS44NTgyOTcgMzkuNiAyMzMuOTk5OTk1IDM5LjYgCkwgMjM0IDE1NC44IAp6CiIgc3R5bGU9ImZpbGw6ICM3NWI5ZGE7IHN0cm9rZTogI2ZmZmZmZjsgc3Ryb2tlLWxpbmVqb2luOiBtaXRlciIvPgogICA8L2c+CiAgIDxnIGlkPSJwYXRjaF8zIj4KICAgIDxwYXRoIGQ9Ik0gMTc4LjUwMTk2MyAyNTUuNzUwNTIgCkMgMTk5LjgxNzMxIDI2Ny40Njg3MzYgMjI0LjMwNjEwNCAyNzIuMTQwMjMzIDI0OC40MzgzNzUgMjY5LjA5MTYxNiAKQyAyNzIuNTcwNjQ2IDI2Ni4wNDMwMDYgMjk1LjEyODMyOCAyNTUuNDI4MTYgMzEyLjg1OTgxNSAyMzguNzc3MTkyIApDIDMzMC41OTEzMDIgMjIyLjEyNjIyNCAzNDIuNjAxNjExIDIwMC4yNzk1NjQgMzQ3LjE1OTQ4OSAxNzYuMzg2MzM2IApDIDM1MS43MTczNjYgMTUyLjQ5MzEwOCAzNDguNTkyNzY1IDEyNy43NTkzMTMgMzM4LjIzNjA3NyAxMDUuNzUwMjMzIApMIDIzNCAxNTQuOCAKegoiIHN0eWxlPSJmaWxsOiAjZjRiODYwOyBzdHJva2U6ICNmZmZmZmY7IHN0cm9rZS1saW5lam9pbjogbWl0ZXIiLz4KICAgPC9nPgogICA8ZyBpZD0icGF0Y2hfNCI+CiAgICA8cGF0aCBkPSJNIDEyMC44NDA1MTggMTMzLjIxMzYyNiAKQyAxMTYuMjgyNjM0IDE1Ny4xMDY4NTggMTE5LjQwNzIyOCAxODEuODQwNjczIDEyOS43NjM5MTYgMjAzLjg0OTc2IApDIDE0MC4xMjA2MDQgMjI1Ljg1ODg0MiAxNTcuMTg2NjE1IDI0NC4wMzIzMDMgMTc4LjUwMTk2MyAyNTUuNzUwNTIgCkwgMjM0IDE1NC44IAp6CiIgc3R5bGU9ImZpbGw6ICM5MGM5ODc7IHN0cm9rZTogI2ZmZmZmZjsgc3Ryb2tlLWxpbmVqb2luOiBtaXRlciIvPgogICA8L2c+CiAgIDxnIGlkPSJwYXRjaF81Ij4KICAgIDxwYXRoIGQ9Ik0gMjM0LjAwMDAwMSAzOS42IApDIDIwNy4xOTg2NDMgMzkuNiAxODEuMjE5NTgyIDQ4Ljk1MzAzOSAxNjAuNTY4Nzc3IDY2LjAzNjg2MSAKQyAxMzkuOTE3OTc1IDgzLjEyMDY4NCAxMjUuODYyNjAyIDEwNi44ODY5OTYgMTIwLjg0MDUxOCAxMzMuMjEzNjI2IApMIDIzNCAxNTQuOCAKegoiIHN0eWxlPSJmaWxsOiAjZTc5OGFkOyBzdHJva2U6ICNmZmZmZmY7IHN0cm9rZS1saW5lam9pbjogbWl0ZXIiLz4KICAgPC9nPgogICA8ZyBpZD0ibWF0cGxvdGxpYi5heGlzXzEiLz4KICAgPGcgaWQ9Im1hdHBsb3RsaWIuYXhpc18yIi8+CiAgIDxnIGlkPSJ0ZXh0XzEiPgogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2FucyciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1NS45NzI3MTIgODguNzM3MTk1KSI+TGVvIG7Dumk8L3RleHQ+CiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjYzLjAwOTQzMSA5OS45MzUwMDcpIj4xOCU8L3RleHQ+CiAgIDwvZz4KICAgPGcgaWQ9InRleHRfMiI+CiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjYzLjc3NTI5MSAyMDYuOTk3OTg2KSI+Q+G6r20gdHLhuqFpPC90ZXh0PgogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2FucyciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3NC4xNDU2MDMgMjE4LjE5NTc5OSkiPjQwJTwvdGV4dD4KICAgPC9nPgogICA8ZyBpZD0idGV4dF8zIj4KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDIuODYwNjAzIDE4My44NDI4KSI+VOG6r20gYmnhu4NuPC90ZXh0PgogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2FucyciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1NS4xMzMyNTkgMTk1LjA0MDYxMykiPjIwJTwvdGV4dD4KICAgPC9nPgogICA8ZyBpZD0idGV4dF80Ij4KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDcuMDQzMTM4IDk0LjI5MDk5MikiPlRoxINtIHRyYW5nIHRy4bqhaTwvdGV4dD4KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNzUuMTU2NDIgMTA1LjQ4ODgwNSkiPjIyJTwvdGV4dD4KICAgPC9nPgogIDwvZz4KIDwvZz4KPC9zdmc+Cg=="></figure></p><p class="st">a) Có bao nhiêu phần trăm số học sinh thích tắm biển?</p><p class="st">b) Hoạt động dã ngoại nào được nhiều học sinh yêu thích nhất? Có bao nhiêu bạn yêu thích hoạt động đó?</p><div class="frow"><label class="fl">a) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">b) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div><div class="card q" id="qb47"><span class="score-tag"></span><div class="q-head"><span class="num">47</span><span class="t">Bài 47</span></div><p class="st">Biểu đồ cho biết tỉ số phần trăm học sinh tham gia các môn thể thao của lớp 5H. Biết lớp 5H có 60 học sinh. Quan sát biểu đồ quạt tròn dưới đây và trả lời các câu hỏi bên dưới.</p><p class="st"><figure class="fig"><img alt="Hình minh họa của câu hỏi" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjQ2OHB0IiBoZWlnaHQ9IjMwOS42cHQiIHZpZXdCb3g9IjAgMCA0NjggMzA5LjYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj4KIDxtZXRhZGF0YT4KICA8cmRmOlJERiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgIDxjYzpXb3JrPgogICAgPGRjOnR5cGUgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIvPgogICAgPGRjOmRhdGU+MjAyNi0xMS0xNVQyMDozNToxMS43NjUxOTY8L2RjOmRhdGU+CiAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgIDxkYzpjcmVhdG9yPgogICAgIDxjYzpBZ2VudD4KICAgICAgPGRjOnRpdGxlPk1hdHBsb3RsaWIgdjMuMTAuOCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy88L2RjOnRpdGxlPgogICAgIDwvY2M6QWdlbnQ+CiAgICA8L2RjOmNyZWF0b3I+CiAgIDwvY2M6V29yaz4KICA8L3JkZjpSREY+CiA8L21ldGFkYXRhPgogPGRlZnM+CiAgPHN0eWxlIHR5cGU9InRleHQvY3NzIj4qe3N0cm9rZS1saW5lam9pbjogcm91bmQ7IHN0cm9rZS1saW5lY2FwOiBidXR0fTwvc3R5bGU+CiA8L2RlZnM+CiA8ZyBpZD0iZmlndXJlXzEiPgogIDxnIGlkPSJwYXRjaF8xIj4KICAgPHBhdGggZD0iTSAwIDMwOS42IApMIDQ2OCAzMDkuNiAKTCA0NjggMCAKTCAwIDAgCnoKIiBzdHlsZT0iZmlsbDogI2ZmZmZmZiIvPgogIDwvZz4KICA8ZyBpZD0iYXhlc18xIj4KICAgPGcgaWQ9InBhdGNoXzIiPgogICAgPHBhdGggZD0iTSAzMjEuNTEwOTY1IDEwMC4wMDc2ODkgCkMgMzExLjQ3Nzc5NyA4Ni4xOTgyMTkgMjk4LjMxNjkxNyA3NC45NTc3NjIgMjgzLjEwNzkzMSA2Ny4yMDgzOTQgCkMgMjY3Ljg5ODk0NSA1OS40NTkwMjcgMjUxLjA2OTQzOSA1NS40MTg2MjUgMjMzLjk5OTk5NSA1NS40MTg2MjUgCkwgMjM0IDE2My41ODgxMjUgCnoKIiBzdHlsZT0iZmlsbDogIzc1YjlkYTsgc3Ryb2tlOiAjZmZmZmZmOyBzdHJva2UtbGluZWpvaW46IG1pdGVyIi8+CiAgIDwvZz4KICAgPGcgaWQ9InBhdGNoXzMiPgogICAgPHBhdGggZD0iTSAxNDYuNDg5MDM1IDIyNy4xNjg1NjEgCkMgMTYzLjM0NTE0OSAyNTAuMzY5MDA1IDE4OC43NTQzIDI2NS45Mzk3NTggMjE3LjA3ODU2MyAyNzAuNDI1ODgxIApDIDI0NS40MDI4MjcgMjc0LjkxMjAwNSAyNzQuMzc5OTg5IDI2Ny45NTUyMDQgMjk3LjU4MDQzNiAyNTEuMDk5MDkgCkMgMzIwLjc4MDg4IDIzNC4yNDI5NzYgMzM2LjM1MTYyNiAyMDguODMzODMxIDM0MC44Mzc3NSAxODAuNTA5NTY5IApDIDM0NS4zMjM4OCAxNTIuMTg1MzA1IDMzOC4zNjcwNzkgMTIzLjIwODEzNiAzMjEuNTEwOTY1IDEwMC4wMDc2ODkgCkwgMjM0IDE2My41ODgxMjUgCnoKIiBzdHlsZT0iZmlsbDogI2Y0Yjg2MDsgc3Ryb2tlOiAjZmZmZmZmOyBzdHJva2UtbGluZWpvaW46IG1pdGVyIi8+CiAgIDwvZz4KICAgPGcgaWQ9InBhdGNoXzQiPgogICAgPHBhdGggZD0iTSAxNDYuNDg5MDU1IDEwMC4wMDc2NjMgCkMgMTMzLjA2NDI2MiAxMTguNDg1MjkzIDEyNS44MzA1MDYgMTQwLjc0ODQ3NiAxMjUuODMwNSAxNjMuNTg4MDkgCkMgMTI1LjgzMDQ4NyAxODYuNDI3NzAzIDEzMy4wNjQyNDkgMjA4LjY5MDkyNSAxNDYuNDg5MDM1IDIyNy4xNjg1NjEgCkwgMjM0IDE2My41ODgxMjUgCnoKIiBzdHlsZT0iZmlsbDogIzkwYzk4Nzsgc3Ryb2tlOiAjZmZmZmZmOyBzdHJva2UtbGluZWpvaW46IG1pdGVyIi8+CiAgIDwvZz4KICAgPGcgaWQ9InBhdGNoXzUiPgogICAgPHBhdGggZD0iTSAyMzQuMDAwMDAxIDU1LjQxODYyNSAKQyAyMTYuOTMwNTcgNTUuNDE4NjI1IDIwMC4xMDEwNzggNTkuNDU5MDI3IDE4NC44OTIxMDIgNjcuMjA4MzgxIApDIDE2OS42ODMxMjkgNzQuOTU3NzM2IDE1Ni41MjIyMjIgODYuMTk4MjA2IDE0Ni40ODkwNTUgMTAwLjAwNzY2MyAKTCAyMzQgMTYzLjU4ODEyNSAKegoiIHN0eWxlPSJmaWxsOiAjZTc5OGFkOyBzdHJva2U6ICNmZmZmZmY7IHN0cm9rZS1saW5lam9pbjogbWl0ZXIiLz4KICAgPC9nPgogICA8ZyBpZD0ibWF0cGxvdGxpYi5heGlzXzEiLz4KICAgPGcgaWQ9Im1hdHBsb3RsaWIuYXhpc18yIi8+CiAgIDxnIGlkPSJ0ZXh0XzEiPgogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2FucyciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1OC4wNDEyNDUgOTguMTAxNzY5KSI+QsahaTwvdGV4dD4KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNTQuODA2ODcgMTA5LjI5OTU4MikiPjE1JTwvdGV4dD4KICAgPC9nPgogICA8ZyBpZD0idGV4dF8yIj4KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNTMuMjIyNTk2IDIxOC4wNTcyODMpIj5D4bqndSBsw7RuZzwvdGV4dD4KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjQuMjE0MDAzIDIyOS4yNTUwOTUpIj41MCU8L3RleHQ+CiAgIDwvZz4KICAgPGcgaWQ9InRleHRfMyI+CiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ2LjM1Nzc5NCAxNjAuNzQ4NTk0KSI+Q+G7nSB2dWE8L3RleHQ+CiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMHB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTUyLjU3NjU0NCAxNzEuOTQ2NDA2KSI+MjAlPC90ZXh0PgogICA8L2c+CiAgIDxnIGlkPSJ0ZXh0XzQiPgogICAgPHRleHQgc3R5bGU9ImZvbnQtc2l6ZTogMTBweDsgZm9udC1mYW1pbHk6ICdEZWphVnUgU2FucyciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3OC4yNTA5NDIgOTguMzAxNzY5KSI+QsOzbmcgYsOgbjwvdGV4dD4KICAgIDx0ZXh0IHN0eWxlPSJmb250LXNpemU6IDEwcHg7IGZvbnQtZmFtaWx5OiAnRGVqYVZ1IFNhbnMnIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOTAuOTY2NTY3IDEwOS40OTk1ODIpIj4xNSU8L3RleHQ+CiAgIDwvZz4KICAgPGcgaWQ9InRleHRfNSI+CiAgICA8dGV4dCBzdHlsZT0iZm9udC1zaXplOiAxMnB4OyBmb250LWZhbWlseTogJ0RlamFWdSBTYW5zJzsgdGV4dC1hbmNob3I6IG1pZGRsZSIgeD0iMjM0IiB5PSIyMi4zNzYyNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTAgMjM0IDIyLjM3NjI1KSI+Q8OhYyBtw7RuIHRo4buDIHRoYW8gY+G7p2EgbOG7m3AgNUg8L3RleHQ+CiAgIDwvZz4KICA8L2c+CiA8L2c+Cjwvc3ZnPgo="></figure></p><p class="st">a) Số học sinh tham gia môn bơi là bao nhiêu học sinh?</p><p class="st">b) Tổng số học sinh tham gia môn Cờ vua, Cầu lông, Bơi là bao nhiêu học sinh?</p><p class="st">c) Tỉ số của số học sinh tham gia môn Bóng bàn với số học sinh tham gia Cầu lông bằng bao nhiêu?</p><div class="frow"><label class="fl">a) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="0" aria-label="Ô trả lời 1"></label><label class="fl">b) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="1" aria-label="Ô trả lời 2"></label><label class="fl">c) <input class="fi" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-u="2" aria-label="Ô trả lời 3"></label></div><button type="button" class="btn small chk" disabled>Kiểm tra câu này</button><div class="fb" aria-live="polite"></div></div>
+<div class="submit-zone"><button class="btn" id="submitBtn" type="button">Nộp bài</button><p id="msg" role="alert"></p></div>
+<div class="card" id="result" tabindex="-1"><div class="em" id="rEm"></div><div class="sc" id="rSc"></div><div class="s10" id="r10"></div><p id="rMsg" class="rmsg"></p><p class="note" id="rSend"></p><button class="btn green" id="retryBtn" type="button">Làm lại từ đầu</button></div>
+</div>
+<script>
+var CFG={"gas": "https://script.google.com/macros/s/AKfycby_OmwTYAGJ5BdCL-u2lTPFqYsBMLqLtmeFUTeQYF52w0Nk-H0KlrvoWjINA5K0js1lIw/exec", "bai": "Đề cương cuối học kì II - Dạng 7", "total": 5};
+var QS=[{"no": "b42", "t": "self", "u": [], "ansh": "", "sol": "", "multi": false}, {"no": "b43", "t": "self", "u": [], "ansh": "", "sol": "", "multi": false}, {"no": "b44", "t": "self", "u": [], "ansh": "", "sol": "", "multi": false}, {"no": "b45", "t": "self", "u": [], "ansh": "", "sol": "", "multi": false}, {"no": "b46", "t": "fill", "u": [{"label": "Bài 46a", "ans": ["20"]}, {"label": "Bài 46b", "ans": ["80"]}], "ansh": "20; 80", "sol": "<p class=\"st\">a) 20%; b) Cắm trại: 200 × 40% = 80 học sinh.</p>", "multi": false}, {"no": "b47", "t": "fill", "u": [{"label": "Bài 47a", "ans": ["9"]}, {"label": "Bài 47b", "ans": ["51"]}, {"label": "Bài 47c", "ans": ["3/10"]}], "ansh": "9; 51; <span class=\"mt\"><span class=\"fr\"><span class=\"n\">3</span><span class=\"d\">10</span></span></span>", "sol": "<p class=\"st\">a) 9 học sinh; b) 51 học sinh; c) 3/10.</p>", "multi": false}];
+(function(){
+"use strict";
+function $(id){return document.getElementById(id);}
+var LOP_LINK=(new URLSearchParams(location.search).get('lop')||'').trim();
+var sound=true,ctx=null,done={},graded=false,pend=0;
+var PRAISE=["Giỏi quá!","Chính xác!","Tuyệt vời!","Em làm rất tốt!","Hay lắm!","Đúng rồi, siêu quá!"];
+var COMF=["Không sao, em xem lại lời giải nhé.","Cố lên, lần sau em sẽ làm đúng!","Gần được rồi, xem đáp án nhé.","Sai một chút thôi, em đọc lời giải nhé."];
+var pi=0,ci=0;
+function audio(){try{if(!ctx){var C=window.AudioContext||window.webkitAudioContext;if(C)ctx=new C();}if(ctx&&ctx.state==="suspended")ctx.resume();}catch(e){}return ctx;}
+function tone(f,t0,d,type,vol){var c=audio();if(!c)return;try{var o=c.createOscillator(),g=c.createGain();o.type=type||"sine";o.frequency.value=f;g.gain.setValueAtTime(0.0001,c.currentTime+t0);g.gain.exponentialRampToValueAtTime(vol||0.2,c.currentTime+t0+0.02);g.gain.exponentialRampToValueAtTime(0.0001,c.currentTime+t0+d);o.connect(g);g.connect(c.destination);o.start(c.currentTime+t0);o.stop(c.currentTime+t0+d+0.05);}catch(e){}}
+function sOk(){if(!sound)return;tone(880,0,0.18,"sine",0.22);tone(1320,0.12,0.28,"sine",0.2);}
+function sBad(){if(!sound)return;tone(196,0,0.28,"triangle",0.16);tone(165,0.14,0.3,"triangle",0.12);}
+$("muteBtn").addEventListener("click",function(){sound=!sound;this.textContent=sound?"🔊":"🔇";this.setAttribute("aria-pressed",sound?"false":"true");if(sound)audio();});
+/* ---- chuẩn hóa so sánh ---- */
+function norm(s){return String(s==null?"":s).replace(/[\s ]+/g,"").replace(/,/g,".").toLowerCase();}
+function num(s){if(/^-?\d+(\.\d+)?$/.test(s))return parseFloat(s);return null;}
+function eqAns(user,alts){
+  var u=norm(user);if(!u)return false;
+  for(var i=0;i<alts.length;i++){
+    var a=norm(alts[i]);
+    if(u===a)return true;
+    var na=num(a),nu=num(u);
+    if(na!==null){
+      if(nu!==null&&nu===na)return true;
+      if(/^\d{1,3}(\.\d{3})+$/.test(u)&&Math.abs(parseFloat(u.replace(/\./g,""))-na)<1e-9&&Number.isInteger(na))return true;
+      var m=u.match(/^(-?[\d.]+)([a-zA-Z%²³°\/]+.*)$/);
+      if(m&&num(m[1])===na)return true;
+    }
+  }
+  return false;
+}
+/* ---- dựng trạng thái ---- */
+var qEl=[];
+QS.forEach(function(q,i){qEl[i]=$("q"+q.no);});
+function SK(q){return q.t==="loi"||q.t==="self";}
+var scored=QS.filter(function(q){return !SK(q);});
+function prog(){var n=Object.keys(done).length;$("barFill").style.width=Math.round(100*n/scored.length)+"%";$("barTxt").textContent=n+"/"+scored.length;}
+function unitTotal(){return scored.reduce(function(s,q){return s+q.u.length;},0);}
+function readAnswer(card,q){
+  var r=[];
+  if(q.t==="fill"){card.querySelectorAll(".fi").forEach(function(e){r.push(e.value);});}
+  return r;
+}
+function gradeQ(i,silent){
+  var q=QS[i],card=qEl[i];if(!card||done[i]!==undefined||SK(q))return;
+  var res=[],earned=0;
+  if(q.t==="fill"){
+    var ins=card.querySelectorAll(".fi,.symrow");
+    q.u.forEach(function(u,k){var inp=ins[k],isS=!!inp&&inp.classList.contains("symrow"),v=!inp?"":(isS?(inp.getAttribute("data-v")||""):inp.value),ok=!!inp&&eqAns(v,u.ans);
+      if(inp&&!isS){inp.classList.add(ok?"right":"wrong");inp.readOnly=true;}
+      if(isS){inp.querySelectorAll("button").forEach(function(b){b.disabled=true;var bk=b.getAttribute("data-k");if(eqAns(bk,u.ans))b.classList.add("right");else if(bk===v)b.classList.add("wrong");});}
+      res.push(ok);});
+  }else{
+    var sel=[];
+    if(q.t==="cmp"){var b=card.querySelector(".cmpb.sel");if(b)sel=[b.getAttribute("data-k")];}
+    else card.querySelectorAll("input:checked").forEach(function(e){sel.push(e.value);});
+    var selS=sel.slice().sort().join(","),ok=q.u[0].ans.some(function(a){return a.split(",").sort().join(",")===selS;});
+    res.push(ok);
+    var cs=q.u[0].ans.join(",").split(",");
+    card.querySelectorAll(".opt,.cmpb").forEach(function(o){var k=o.getAttribute("data-k");var isC=cs.indexOf(k)>=0,isS=sel.indexOf(k)>=0;if(isC)o.classList.add("right");else if(isS)o.classList.add("wrong");var inp=o.querySelector("input");if(inp)inp.disabled=true;});
+    card.querySelectorAll(".cmpb").forEach(function(o){o.disabled=true;});
+  }
+  res.forEach(function(r){if(r)earned++;});
+  done[i]={res:res,earned:earned};
+  var all=earned===res.length;
+  card.classList.add(all?"ok":"bad");card.classList.add("graded");
+  var ch=card.querySelector(".chk");if(ch)ch.disabled=true;
+  var tag=card.querySelector(".score-tag");if(tag){tag.textContent=earned+" / "+res.length+" điểm";tag.className="score-tag "+(all?"full":(earned===0?"zero":"part"));}
+  var fb=card.querySelector(".fb");
+  var vd=all?("Đúng rồi! "+PRAISE[pi++%PRAISE.length]):("Chưa đúng. "+COMF[ci++%COMF.length]);
+  var h='<div class="vd">'+(all?"✅ ":"💡 ")+vd+'</div>';
+  if(!all||q.t==="fill")h+='<div>Đáp án đúng: '+q.ansh+'</div>';
+  if(q.sol)h+='<div class="sl">Lời giải: '+q.sol+'</div>';
+  fb.innerHTML=h;
+  card.classList.add("graded");
+  if(!silent){if(all){sOk();card.classList.add("pop");spark(card);}else sBad();}
+  prog();
+}
+function spark(card){var s=["⭐","✨","🌟"];for(var k=0;k<4;k++){var e=document.createElement("span");e.className="spark";e.textContent=s[k%3];e.style.left=(20+k*20)+"%";e.style.top="8px";card.appendChild(e);(function(x){setTimeout(function(){x.remove();},1100);})(e);}}
+QS.forEach(function(q,i){
+  var card=qEl[i];
+  if(card&&q.t==="self"){var sb=card.querySelector(".selfbtn");if(sb)sb.addEventListener("click",function(){card.classList.add("shown");sb.disabled=true;audio();});return;}
+  if(!card||SK(q))return;
+  card.querySelectorAll(".symrow").forEach(function(row){row.querySelectorAll("button").forEach(function(b){b.addEventListener("click",function(){if(done[i]!==undefined)return;audio();row.querySelectorAll("button").forEach(function(x){x.classList.remove("sel");});b.classList.add("sel");row.setAttribute("data-v",b.getAttribute("data-k"));card.dispatchEvent(new Event("input",{bubbles:true}));});});});
+  if(q.t==="mc"&&!q.multi)card.querySelectorAll(".opt input").forEach(function(inp){inp.addEventListener("change",function(){audio();gradeQ(i);});});
+  if(q.t==="cmp")card.querySelectorAll(".cmpb").forEach(function(b){b.addEventListener("click",function(){audio();b.classList.add("sel");gradeQ(i);});});
+  if(q.t==="mc"&&q.multi||q.t==="fill"){
+    var ch=card.querySelector(".chk");
+    function upd(){if(!ch||done[i]!==undefined)return;var any=false;if(q.t==="fill"){card.querySelectorAll(".fi").forEach(function(e){if(e.value.trim())any=true;});card.querySelectorAll(".symrow").forEach(function(e){if(e.getAttribute("data-v"))any=true;});}else{any=!!card.querySelector("input:checked");}ch.disabled=!any;}
+    card.addEventListener("input",upd);card.addEventListener("change",upd);
+    if(ch)ch.addEventListener("click",function(){audio();gradeQ(i);});
+    card.querySelectorAll(".fi").forEach(function(e){e.addEventListener("keydown",function(ev){if(ev.key==="Enter"){ev.preventDefault();if(ch&&!ch.disabled){audio();gradeQ(i);}}});});
+  }
+});
+prog();
+/* ---- họ tên / lớp ---- */
+var nm=$("studentName"),cl=$("studentClass");
+if(LOP_LINK){cl.value=LOP_LINK;cl.readOnly=true;
+  var tm=setTimeout(function(){},0),got=false;
+  try{
+    var ctl=("AbortController" in window)?new AbortController():null;
+    var to=setTimeout(function(){if(ctl)ctl.abort();},5000);
+    fetch(CFG.gas+"?action=roster&lop="+encodeURIComponent(LOP_LINK),ctl?{signal:ctl.signal}:{}).then(function(r){return r.json();}).then(function(d){clearTimeout(to);
+      if(d&&d.ok&&d.names&&d.names.length){
+        var box=document.createElement("div");box.className="nm-list";box.id="nmList";
+        d.names.forEach(function(n){var b=document.createElement("button");b.type="button";b.textContent=n;b.addEventListener("click",function(){box.querySelectorAll("button").forEach(function(x){x.classList.remove("on");});b.classList.add("on");nm.value=n;nm.type="hidden";});box.appendChild(b);});
+        var o=document.createElement("button");o.type="button";o.textContent="Tên con không có trong danh sách";o.addEventListener("click",function(){box.remove();nm.type="text";nm.value="";nm.focus();});box.appendChild(o);
+        nm.type="hidden";nm.parentNode.appendChild(box);
+      }}).catch(function(){clearTimeout(to);});
+  }catch(e){}
+}
+/* ---- nộp bài ---- */
+var warned=false;
+$("submitBtn").addEventListener("click",function(){
+  if(graded)return;
+  var msg=$("msg");
+  var nmv=nm.value.trim(),clv=cl.value.trim();
+  if(!nmv||!clv){msg.textContent=!nmv&&$("nmList")?"Em hãy chọn tên của mình trong danh sách nhé!":"Em hãy điền họ tên và lớp trước khi nộp bài nhé!";(nmv?cl:(nm.type==="hidden"?$("nmList"):nm)).scrollIntoView({block:"center"});return;}
+  var left=0;QS.forEach(function(q,i){if(!SK(q)&&done[i]===undefined)left++;});
+  if(left>0&&!warned){warned=true;msg.textContent="Em còn "+left+" câu chưa làm. Em kiểm tra lại nhé. Nếu vẫn muốn nộp, hãy bấm “Nộp bài” lần nữa.";return;}
+  msg.textContent="";graded=true;
+  QS.forEach(function(q,i){if(!SK(q))gradeQ(i,true);});
+  var earned=0,total=0,wrong=[];
+  QS.forEach(function(q,i){if(SK(q))return;var d=done[i];q.u.forEach(function(u,k){total++;if(d.res[k])earned++;else if(wrong.indexOf(u.label)<0)wrong.push(u.label);});});
+  $("submitBtn").disabled=true;nm.disabled=true;
+  var loplink=LOP_LINK;
+  try{fetch(CFG.gas,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({bai:CFG.bai,hoten:nmv,lop:clv,loplink:loplink,diem:earned,tongdiem:total,causai:wrong.join(", ")})}).then(function(){$("rSend").textContent="Bài của em đã được gửi cho cô giáo.";}).catch(function(){$("rSend").textContent="Chưa gửi được bài, em kiểm tra mạng rồi báo cô nhé.";});}catch(e){}
+  var pct=total?earned/total:0,em,m;
+  if(pct>=.9){em="🏆";m="Tuyệt vời! Em làm bài rất xuất sắc!";}
+  else if(pct>=.7){em="🌟";m="Rất tốt! Em xem lại các câu đỏ để giỏi hơn nữa nhé.";}
+  else if(pct>=.5){em="👍";m="Khá lắm! Em đọc lời giải các câu sai rồi thử lại nhé.";}
+  else{em="🌱";m="Đừng lo, em xem lại lời giải rồi làm lại, em sẽ tiến bộ!";}
+  if(pct>=.7&&sound){sOk();}
+  $("rEm").textContent=em;$("rSc").textContent=earned+" / "+total+" điểm";
+  $("r10").textContent="Quy ra thang 10: "+(Math.round(pct*100)/10).toString().replace(".",",")+" điểm";
+  $("rMsg").textContent=nmv+" ơi, "+m;
+  $("result").classList.add("show");$("result").scrollIntoView({behavior:"smooth",block:"center"});
+});
+$("retryBtn").addEventListener("click",function(){location.reload();});
+window.__test={QS:QS,done:done,gradeQ:gradeQ,eqAns:eqAns};
+})();
+
+</script>
+</body>
+</html>
